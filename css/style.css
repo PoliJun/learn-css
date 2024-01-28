@@ -1,0 +1,36 @@
+body {
+    background-color: lightblue;
+}
+
+h1,
+h2 {
+    color: blue;
+}
+
+h1 h2 {
+    color: red;
+}
+
+p {
+    color: purple !important;
+    font-size: 64px;
+}
+
+.gray {
+    background-color: gray;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    /* then it will be inherited font-family: inherit; */
+
+    font-size: inherit;
+    line-height: inherit;
+}
+
+p {
+    color: red !important;
+}
