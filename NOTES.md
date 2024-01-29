@@ -410,3 +410,60 @@ From inner to outer:
 2. padding
 3. border
 4. margin
+
+### `box-sizing`
+
+```css
+* {
+  box-sizing: border-box;
+}
+```
+
+- `content-box` is default
+  > `width` and `height` only apply to content
+- no influence on `margin` and `border`
+  > because `margin` and `border` are outside of a box.
+- `border-box`
+  > `width` and `height` apply to content, padding and border
+
+### margin shorthand
+
+```css
+.container {
+  margin: 0 auto; /* top and bottom is 0, left and right is auto */
+  margin: 0 auto 0 auto; /* top, right, bottom, left */
+  margin: 1.5rem 2rem 0; /* top, right and left, bottom */
+  padding: 0 20px;
+  border: 1px solid black;
+}
+```
+
+### compute tab in browser
+
+use it to check the box model
+
+### border-top-style
+
+so many border related properties
+
+### outline
+
+outline is outside of border.
+
+- outline-style
+- outline-color
+- outline-width
+- outline-offset
+  > this value can be negative
+- outline
+
+### CSS Rounded Borders
+
+```css
+.radius {
+  border: 100px solid red;
+  border-radius: 50px;
+}
+```
+
+When `border-radius` is half of `border`, it will be a circle.
