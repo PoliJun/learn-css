@@ -413,6 +413,8 @@ From inner to outer:
 
 ### `box-sizing`
 
+[box-sizing](https://www.tutorialspoint.com/css/css3_box_sizing.htm)
+
 ```css
 * {
   box-sizing: border-box;
@@ -777,6 +779,7 @@ a:hover {
 ## Lists
 
 - `ul` (unordered list)
+
 ```css
 ul {
     list-style-type: none;
@@ -784,11 +787,12 @@ ul {
     list-style-position: inside; /* outside is default */
     color: red;
     line-height: 1.5;
-    list-style-image: url("https://www.w3schools.com/cssref/sqpurple.png"); 
-    list-style-image: url("../image/sqpurple.png"); 
+    list-style-image: url("https://www.w3schools.com/cssref/sqpurple.png");
+    list-style-image: url("../image/sqpurple.png");
     inside; /* this is a shorthand, outside is default */
 }
 ```
+
 - `ol` (ordered list)
 
 ```css
@@ -800,6 +804,7 @@ ol {
 ### `ol` tag
 
 - example 1:
+
 ```html
 <ol start="5" reversed>
   <li>nnn</li>
@@ -828,7 +833,7 @@ ol{
 ```html
 <ol start="5" reversed>
   <li>nnn</li>
-  <li value=26>ddd</li>
+  <li value="26">ddd</li>
   <li>ccc</li>
 </ol>
 ```
@@ -847,12 +852,12 @@ ol{
     padding: 0;
 }
 ```
+
 ### `li`
 
 ```css
 ul li:nth-child(odd) {
-    color: red;
-
+  color: red;
 }
 ```
 
@@ -860,10 +865,38 @@ ul li:nth-child(odd) {
 
 ```css
 ::marker {
-    color: red;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 1.5rem;
-    content: "👉"; /* This can be svg etc. */
+  color: red;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.5rem;
+  content: "👉"; /* This can be svg etc. */
+}
+```
+## `nav`
+
+## `display` 
+
+- `display: none;` will remove the element from the DOM.
+- `display: block;` will make the element a block element (like `<p>`).
+- `display: inline;` will make the element an inline element (like `<span>`).
+- `display: inline-block;` will make the element an inline block element (like `<img>`).
+
+```css
+ul li {
+    display: block;
+}
+
+li a:hover {
+    background-color: #111;
+
 }
 ```
 
+With `display: block;`, the whole `li` will be clickable. Not only the text.
+
+### `li:last-child`
+
+```css
+li:last-child {
+    border-radius: 0 0 5px 5px;
+}
+```
