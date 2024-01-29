@@ -979,4 +979,237 @@ li a:hover {
 }
 ```
 
-## Floats
+## Float
+
+```html
+<style>
+  .float {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: red;
+  }
+  p {
+    margin: 10px;
+  }
+</style>
+<div class="float"></div>
+<p>afaewaewfawfeawfaweawefawew</p>
+<p>afaewaewfawfeawfaweawefawew</p>
+<p>afaewaewfawfeawfaweawefawew</p>
+<p>afaewaewfawfeawfaweawefawew</p>
+<p>afaewaewfawfeawfaweawefawew</p>
+<p>afaewaewfawfeawfaweawefawew</p>
+<p>afaewaewfawfeawfaweawefawew</p>
+<p>afaewaewfawfeawfaweawefawew</p>
+```
+
+- In this case, `p` won't margin with the `div` with class `float`. Because `float` will take the element out of the normal flow. Use `margin` on `.float` instead.
+- `clear` would illiminate the effect of `float`.
+
+### `display: flow-root;`
+
+```html
+<section>
+  <div class="float">Float</div>
+  <h3 id="d_h">
+    Section Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum,
+    alias!
+  </h3>
+</section>
+```
+
+The section doesn't wrap the float div. It's because the float div is out of the normal flow.
+There are two ways to fix this
+
+1.  we can use `display: flow-root;` on the container.
+
+```css
+.container {
+  display: flow-root;
+}
+```
+
+2. we can use `overflow: auto;` on the container.
+
+```css
+.container {
+  overflow: auto;
+}
+```
+
+The first way is better.
+
+##### Explain:
+
+Both `overflow: auto;` and `display: flow-root;` are used to clear floats, but they work in slightly different ways.
+
+**overflow: auto;**
+When you set `overflow: auto;` on a container, it means the container will provide a scrollbar if the content overflows the bounds of that container. As a side effect, it also clears floats, meaning it contains the floated elements inside it and prevents them from overlapping the content below the container.
+
+```css
+.container {
+  overflow: auto;
+}
+```
+
+**display: flow-root;**
+The `display: flow-root;` property creates a new block formatting context, meaning everything inside the container is laid out as a block, and it doesn't interact with anything outside of it. This also effectively clears floats, containing them within the element.
+
+```css
+.container {
+  display: flow-root;
+}
+```
+
+The main difference is that `overflow: auto;` can potentially introduce scrollbars, while `display: flow-root;` will not. Therefore, `display: flow-root;` is often a better choice for clearing floats as it has fewer side effects.
+
+## `clear`
+
+```css
+.clear {
+  clear: both;
+}
+```
+
+## `colums`
+
+- column-count (number of columns)
+- column-width (width of each column)
+  > if you set both `column-count` and `column-width`, the browser will choose the one that fits the screen better. This means that column count will be ignored if the width of each column is too wide to fit the screen.
+  > shorthand
+
+```css
+.container {
+  columns: 100px 3; /* width, number of columns */
+}
+```
+
+```css
+.container {
+  columns: 4 250px; /* number of columns, width */
+}
+```
+
+### `column-rule`
+
+```css
+.columns {
+  columns: 250px 4;
+  column-rule: 3px solid #333;
+}
+```
+
+### `column-gap`
+
+```css
+.columns {
+  columns: 250px 4;
+  column-rule: 3px solid #333;
+  column-gap: 20px;
+}
+```
+
+## Unicode characters
+
+[symbl.cc](https://symbl.cc/)
+
+### Quotation mark
+
+- Heavy Double Turned Comma Quotation Mark Ornament ❝
+
+<table>
+  <tbody>
+    <tr>
+      <td>Unicode Name</td>
+      <td>Heavy Double Turned Comma Quotation Mark Ornament</td>
+    </tr>
+    <tr>
+      <td>Unicode Number</td>
+      <td style="z-index: 1000">
+        <button
+          data-goal="copy-character-code-symbol-page"
+          type="button"
+          class="code js-code-symbl js-symbol-copy"
+          data-label="Click to copy"
+          data-symbol="U+275D"
+        >
+          U+275D
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td><span class="caps">HTML</span> Code</td>
+      <td style="z-index: 100">
+        <button
+          data-goal="copy-character-code-symbol-page"
+          type="button"
+          class="code js-code-symbl js-symbol-copy"
+          data-label="Click to copy"
+          data-symbol="&amp;#10077;"
+        >
+          &amp;#10077;
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>CSS Code</td>
+      <td style="z-index: 10">
+        <button
+          data-goal="copy-character-code-symbol-page"
+          type="button"
+          class="code js-code-symbl js-symbol-copy"
+          data-label="Click to copy"
+          data-symbol="\275D"
+        >
+          \275D
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td>Unicode Block</td>
+      <td><a class="link" href="/en/unicode/blocks/dingbats/">Dingbats</a></td>
+    </tr>
+    <tr>
+      <td>Unicode Subblock</td>
+      <td>
+        <a class="link" href="/en/unicode/blocks/dingbats/#subblock-275B"
+          >Punctuation mark ornaments</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>Unicode Version</td>
+      <td>1.1 (1993)</td>
+    </tr>
+  </tbody>
+</table>
+
+## `column-span`
+
+The column-span: all; CSS property is used within a multi-column layout. It allows an element to span across all columns when its value is set to all. This can be useful for elements like headings or images that you want to stretch across the column layout.
+
+> Selector calculator is useful.  
+> [Specificity Calculator](https://specificity.keegan.st/)
+
+```css
+.columns .quote {
+  font-size: 3rem;
+  text-align: center;
+  color: #333;
+  column-span: all; /* this is not supported by all browsers */
+  margin: 2rem auto 2rem;
+}
+```
+
+## ` white-space: nowrap;`
+
+```html
+<p class="quote">
+  &#10077;Where's my rug, man?&#10078;
+  <span class="nowrap">&#8212;The dude</span>
+</p>
+```
+
+The `-` and `The dude` will always be in the same line.

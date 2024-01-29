@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Column</title>
+    <style>
+      .columns {
+        /* column-count: 4;
+            column-width: 250px; */
+        columns: 250px 4;
+        column-rule: 3px solid #333;
+      }
+      .columns p {
+        margin: 0;
+      }
+      .columns h2 {
+        margin-top: 0;
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+        break-inside: avoid;
+        /* break-before: column; */
+      }
+      .columns .quote {
+        font-size: 3rem;
+        text-align: center;
+        color: #333;
+        column-span: all;
+        margin: 2rem auto 2rem;
+
+      }
+      .nowrap {
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="columns">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eius
+        quidem dolorem quas optio cumque excepturi voluptate dignissimos nihil
+        veritatis!
+      </p>
+      <p>
+        Nihil vel tempore illo accusantium quidem iste, illum aliquid corrupti
+        similique! Id architecto tenetur amet quas dolorum animi? Maxime, optio?
+      </p>
+      <!-- <h2>Next Topic</h2> -->
+      <p class="quote">&#10077;Where's my rug, man?&#10078; <span class="nowrap">&#8212;The dude</span></p>
+      <p>
+        Eveniet eius quod ex incidunt laboriosam excepturi, culpa reiciendis
+        esse explicabo libero numquam quas corporis labore maiores expedita.
+        Vitae, explicabo?
+      </p>
+      <p>
+        Eum dolorem animi minima fugiat laborum voluptatibus eaque molestiae, ea
+        voluptates numquam at cumque recusandae fugit earum dolores repudiandae
+        vel!
+      </p>
+    </section>
+
+    <p>
+      Dicta id dolorum eos quo laboriosam ratione, praesentium eius ipsum totam
+      magni facilis rerum reprehenderit provident expedita iste perferendis
+      tempora!
+    </p>
+  </body>
+</html>
