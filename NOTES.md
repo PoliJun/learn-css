@@ -871,9 +871,10 @@ ul li:nth-child(odd) {
   content: "👉"; /* This can be svg etc. */
 }
 ```
+
 ## `nav`
 
-## `display` 
+## `display`
 
 - `display: none;` will remove the element from the DOM.
 - `display: block;` will make the element a block element (like `<p>`).
@@ -882,12 +883,11 @@ ul li:nth-child(odd) {
 
 ```css
 ul li {
-    display: block;
+  display: block;
 }
 
 li a:hover {
-    background-color: #111;
-
+  background-color: #111;
 }
 ```
 
@@ -897,6 +897,86 @@ With `display: block;`, the whole `li` will be clickable. Not only the text.
 
 ```css
 li:last-child {
-    border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
 }
 ```
+
+## block level element vs inline element
+
+In HTML, elements are categorized as either block-level elements or inline elements.
+
+**Block-level elements** form a visible block on a page. They appear on a new line from the content that comes before and after them. Examples include `<div>`, `<h1>` through `<h6>`, `<p>`, and `<form>`.
+
+**Inline elements** do not start on a new line and only take up as much width as necessary. This is in contrast to block-level elements, which occupy the full width available. Examples include `<span>`, `<a>`, `<img>`, and `<button>`.
+
+Here's a simple comparison:
+
+```html
+<!-- Block-level elements -->
+<div>This is a block-level element.</div>
+<p>So is this.</p>
+
+<!-- Inline elements -->
+<span>This is an inline element.</span>
+<a href="#">So is this.</a>
+```
+
+In the above example, each block-level element starts on a new line, while the inline elements do not.
+
+### margin, padding, display with inline elements
+
+In CSS, `margin`, `padding`, and `display` properties behave differently for inline elements compared to block-level elements.
+
+**Margin and Padding:**
+For inline elements, `margin` and `padding` are applied differently than block-level elements. Inline elements respect left and right margins and padding, but not top and bottom.
+
+**Display:**
+The `display` property determines how an element is displayed. The default value for most elements is either `block` or `inline`.
+
+- `display: inline;` makes the element display inline, like `<span>`.
+- `display: block;` makes the element display as a block, like `<div>`.
+- `display: inline-block;` is a hybrid of `inline` and `block`. It allows the element to sit inline with other elements, but you can still set width and height values, which isn't possible with `display: inline;`.
+
+Here's an example:
+
+```html
+<span
+  style="margin: 10px; padding: 10px; display: inline-block; background-color: lightblue;"
+  >This is an inline-block element.</span
+>
+<span
+  style="margin: 10px; padding: 10px; display: inline; background-color: lightgreen;"
+  >This is an inline element.</span
+>
+```
+
+In the above example, the first span with `display: inline-block;` respects all the margin and padding values. The second span with `display: inline;` only respects the left and right margin and padding, not the top and bottom.
+
+## menu bar
+
+```css
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  background-color: #333;
+}
+
+li {
+  display: inline-block;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+```
+
+## Floats
