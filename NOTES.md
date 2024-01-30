@@ -1243,3 +1243,27 @@ CSS property position helps manipulate position of an element in a web page. The
 ## `z-index` property
 
 The z-index property specifies the stack order of an element. An element with greater stack order is always in front of an element with a lower stack order.
+
+## `scroll-behavior: smooth;`
+
+Scroll smoothly when click:
+
+```html
+<section id="one">
+  <header class="blue">Header One</header>
+  <h2>One</h2>
+</section>
+<section id="two">
+  <header class="red">Header Two</header>
+  <h2>Two</h2>
+</section>
+<section id="three">
+  <header class="green">Header Three</header>
+  <h2>Three</h2>
+</section>
+<footer>
+  <a href="#one">One</a>
+  <a href="#two">Two</a>
+  <a href="#three">Three</a>
+</footer>
+```
