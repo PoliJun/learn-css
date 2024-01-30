@@ -1375,6 +1375,9 @@ body {
   > [Try it](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
 - `background-image: url("img/acg.gy_10.jpg"),linear-gradient(to left, black, purple, #fff);`
   > also `background-image: liner-gradient()`, this is a rainbow.
+- `background-clip: text` with `color`
+  > This will cause the bg-image omitted, If set color some transparency, you can see the bg-image will only show in the font itself.  
+  > [It can also clip others such as border-box, padding-box, etc.](https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip)
 
 ### Background color advanced
 
@@ -1402,3 +1405,9 @@ Set background image in parent container, then in child box, set background colo
         background-size: cover;*/
 }
 ```
+
+### `background` shorthand
+
+There are bunch of shorthands without dash, just one `background` property, values separated by comma.
+
+## Media Queries
