@@ -1267,3 +1267,20 @@ Scroll smoothly when click:
   <a href="#three">Three</a>
 </footer>
 ```
+
+# Grid Layout
+
+- `display: grid;`
+- `grid-auto-flow: column;`
+- `grid-template-columns: 200px 1fr 2fr;`
+- `grid-template-columns: repeat(4,1fr 2fr);`
+  > row as so.
+- `grid-column-start: 1;` `grid-column-end: 4;` and `grid-column: 1/4;`
+- `grid-row-start: 1;` `grid-row-end: 3;` and `grid-row: 1/3;`
+- `align-content: start;` of grid layout
+- `align-content: center;` `justify-content: center;` and `place-content: end center;` or `place-content: center`
+- `grid-template-areas`
+
+```css
+
+```
