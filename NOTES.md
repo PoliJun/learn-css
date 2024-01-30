@@ -1213,3 +1213,33 @@ The column-span: all; CSS property is used within a multi-column layout. It allo
 ```
 
 The `-` and `The dude` will always be in the same line.
+
+## `position` property
+
+[code](container.html)
+
+CSS property position helps manipulate position of an element in a web page. The properties top, bottom, right, and left are used to control its exact position on the page. They specify the offsets of an element from its edges
+
+<ul class="list">
+   <li><p><b>static −</b> The element is positioned according to the default or normal flow of the page. So if we set left/right/top/bottom/z-index, then there will be no effect on that element.</p></li>
+   <li><p><b>relative −</b> The element's orginial position is according to normal flow of the page just like <b>static</b> value. But now left/right/top/bottom/z-index will work. The positional properties push the element from the original position in that direction.</p></li>
+   <li><p><b>absolute −</b> The element is completely removed from the document flow. It is then positioned with respect to its containing block, and its edges are placed using the side-offset properties. An absolutely positioned element may overlap other elements, or be overlapped by them.</p></li>
+   <li><p><b>fixed −</b> The element's fixed positioning is just like absolute positioning, except the containing block of a fixed element is always the viewport. Here the element is totally removed from the document's flow and does not have a position relative to any part of the document. </p></li>
+   <li><p><b>sticky −</b> The element sticks to the top of its nearest positioned ancestor that has a "scrolling mechanism" .</p></li>
+</ul>
+
+### Set an element way off the screen
+
+```css
+.absolute {
+  background-color: blue;
+  position: absolute;
+  top: 0;
+  left: -10000px; /* this is a hack */
+  z-index: 1;
+}
+```
+
+## `z-index` property
+
+The z-index property specifies the stack order of an element. An element with greater stack order is always in front of an element with a lower stack order.
