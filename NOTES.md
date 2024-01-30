@@ -1360,6 +1360,45 @@ body {
 }
 ```
 
-## Practice
+### Practice
 
 [**cssgridgarden**](http://cssgridgarden.com/)
+
+## Images
+
+- `<img>` is inline tag
+- `background-image: url('img/acg.gy_04.jpg');`
+- `background-repeat: no-repeat;`
+- `background-position`
+  > which part of the image
+- `background-size`
+  > [Try it](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
+- `background-image: url("img/acg.gy_10.jpg"),linear-gradient(to left, black, purple, #fff);`
+  > also `background-image: liner-gradient()`, this is a rainbow.
+
+### Background color advanced
+
+Set background image in parent container, then in child box, set background color(better use hsl system: hue, saturation, lightness, transparency), then you can optimize the emphasize of the background image
+
+```css
+.container {
+  background-color: rgb(251, 210, 156);
+  background-image: url("img/acg.gy_04.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero {
+  border-bottom: 2px solid #000;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+
+  background-color: hsla(15, 100%, 31%, 0.17);
+  /* background-color: rgb(251, 210, 156);
+        background-image: url("img/acg.gy_04.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;*/
+}
+```
