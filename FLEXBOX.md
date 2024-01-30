@@ -55,3 +55,9 @@ This will reverse this element
 ## Practice
 
 [**Flexbox Froggy**](https://flexboxfroggy.com/)
+
+## `align-content`, `justify-content` and `align-items`
+
+- [`justify-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)
+- [`align-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)
+- [`align-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
