@@ -1558,3 +1558,10 @@ As of my last knowledge update in January 2022, the `aspect-ratio` property has 
 - The `aspect-ratio` property is part of the CSS Box Sizing Module Level 4, and its behavior is somewhat similar to using the `padding-top` or `padding-bottom` trick for maintaining aspect ratios.
 
 Always consider browser compatibility and use feature detection or fallbacks if necessary, especially if supporting older browsers is a requirement.
+
+## Card Project
+
+### `min()` function
+
+Choose the current min value.
+[**The min() function uses the smallest value, from a comma-separated list of values, as the property value.**](https://www.w3schools.com/cssref/func_min.php)
