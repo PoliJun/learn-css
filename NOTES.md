@@ -1367,6 +1367,8 @@ body {
 ## Images
 
 - `<img>` is inline tag
+- `<figure>` to markup a photo
+  > Use a <figure> element to mark up a photo in a document, and a <figcaption> element to define a caption for the photo:
 - `background-image: url('img/acg.gy_04.jpg');`
 - `background-repeat: no-repeat;`
 - `background-position`
@@ -1411,3 +1413,148 @@ Set background image in parent container, then in child box, set background colo
 There are bunch of shorthands without dash, just one `background` property, values separated by comma.
 
 ## Media Queries
+
+### It's import this line
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```
+
+### media syntax
+
+Syntax:
+
+```css
+@media media type and (condition: breakpoint) {
+  /*  css rules */
+}
+```
+
+There are bunch of media type and breakpoint we can apply.
+
+### Intro by Google Bard
+
+#### @media in CSS: Tailoring Styles for Different Devices and Situations
+
+The `@media` rule in CSS is a powerful tool for creating **responsive web designs** that adapt to different devices and screen sizes. It allows you to define different style sets based on specific media queries, ensuring your website looks and functions optimally across desktops, tablets, smartphones, and more.
+
+Here's a breakdown of @media:
+
+**Syntax:**
+
+```css
+@media media_query {
+  /* CSS styles to apply if the media query matches */
+}
+```
+
+- **media_query:** This is the essential part, specifying the conditions under which the styles within the block will be applied. It can target various aspects like:
+  - **Device type:** `screen`, `print`, `speech`, etc.
+  - **Screen size:** `width`, `height`, `min-width`, `max-width`, etc.
+  - **Orientation:** `portrait`, `landscape`
+  - **Resolution:** `dpi`
+  - **Color scheme:** `prefers-color-scheme: dark`
+  - And many more!
+
+**Example:**
+
+```css
+@media only screen and (max-width: 768px) {
+  /* Styles for screens smaller than 768px wide */
+  .content {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Styles for screens between 769px and 1024px wide */
+  .content {
+    font-size: 18px;
+    padding: 20px;
+  }
+}
+```
+
+**Benefits of using @media:**
+
+- **Improved user experience:** Ensures your website is usable and visually appealing on different devices.
+- **Accessibility:** Helps cater to users with different screen sizes and needs.
+- **Search engine optimization (SEO):** Responsive websites typically rank better in search results.
+- **Efficient code:** Avoids unnecessary styles being applied to devices that don't need them.
+
+**Additional points:**
+
+- You can combine multiple media queries using logical operators like `and`, `or`, and `not` for more granular control.
+- Media queries are essential for responsive web design, but they can also be used for other purposes like print styles or targeting specific browsers.
+- There are various media query features available, so explore the possibilities to achieve your desired design adaptations.
+
+Remember, effectively using `@media` requires understanding your target audience and their devices. By implementing well-structured media queries, you can create a website that delivers a seamless and enjoyable experience for everyone.
+
+### Common breakpoints
+
+Google search this item.
+
+### `aspect-ratio` as breakpoint
+
+The `aspect-ratio` property in CSS is used to set an intrinsic aspect ratio for an element. It is particularly useful when you want to maintain a specific aspect ratio for an element, such as an image or a container, regardless of the size of the viewport.
+
+#### Syntax:
+
+```css
+aspect-ratio: <width> / <height>;
+```
+
+- `<width>`: The width of the aspect ratio.
+- `<height>`: The height of the aspect ratio.
+
+#### Example:
+
+Let's say you have an image, and you want to maintain a 16:9 aspect ratio for it. You can achieve this using the `aspect-ratio` property:
+
+```css
+.image-container {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  /* Other styling properties */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Optional: Maintain aspect ratio and cover container */
+}
+```
+
+In this example:
+
+- The `aspect-ratio: 16 / 9;` is applied to the `.image-container`, setting the desired aspect ratio.
+- The `width: 100%;` ensures that the container takes up the full width of its parent.
+- Inside the container, the `img` element inherits the aspect ratio, and `object-fit: cover;` ensures the image covers the container while maintaining the aspect ratio.
+
+#### Browser Support:
+
+As of my last knowledge update in January 2022, the `aspect-ratio` property has good support in modern browsers, but it might not be supported in older browsers. Always check the latest compatibility information on websites like MDN Web Docs or Can I use (https://caniuse.com/) before using it in a production environment.
+
+#### Use Cases:
+
+1. **Responsive Images:**
+
+   - Maintain a specific aspect ratio for images while making them responsive to different screen sizes.
+
+2. **Video Containers:**
+
+   - Set the aspect ratio for a video container to ensure that videos maintain the correct proportions.
+
+3. **Card Components:**
+
+   - Create card components with a consistent aspect ratio for better visual appeal.
+
+4. **Layouts:**
+   - Establish consistent aspect ratios for layout elements to create visually pleasing designs.
+
+#### Note:
+
+- The `aspect-ratio` property is part of the CSS Box Sizing Module Level 4, and its behavior is somewhat similar to using the `padding-top` or `padding-bottom` trick for maintaining aspect ratios.
+
+Always consider browser compatibility and use feature detection or fallbacks if necessary, especially if supporting older browsers is a requirement.
