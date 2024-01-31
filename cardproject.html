@@ -39,8 +39,8 @@
         flex-direction: column;
       }
 
-      header,
-      footer {
+      :is(header,
+      footer,.card) {
         position: sticky;
         background-color: #1e293b;
         color: whitesmoke;
@@ -164,7 +164,7 @@
       @media screen and (min-width: 1200px) {
         .card {
           /* Remove calc() - min() supports math! */
-          width: min(33% - 1rem, 500px);
+          width: min(calc(33% - 1rem),  500px);
         }
       }
 

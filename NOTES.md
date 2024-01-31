@@ -1228,6 +1228,8 @@ CSS property position helps manipulate position of an element in a web page. The
    <li><p><b>sticky −</b> The element sticks to the top of its nearest positioned ancestor that has a "scrolling mechanism" .</p></li>
 </ul>
 
+**When you use `position:  absolute`, remember to set its parent `position:relative`**
+
 ### Set an element way off the screen
 
 ```css
@@ -1565,3 +1567,130 @@ Always consider browser compatibility and use feature detection or fallbacks if 
 
 Choose the current min value.
 [**The min() function uses the smallest value, from a comma-separated list of values, as the property value.**](https://www.w3schools.com/cssref/func_min.php)
+
+### Change size while resizing the window
+
+```css
+@media screen and (min-width: 1200px) {
+  .card {
+    /* Remove calc() - min() supports math! */
+    width: min(calc(33% - 1rem), 500px);
+  }
+}
+```
+
+This is the effect:
+<video width="320" height="240" controls>
+
+<source src="video/Screen Recording 2024-02-01 at 00.39.58.mov"  type="video/quicktime">
+</video>
+
+## Pseudo
+
+- pseudo class
+
+  > `:pseudo`
+
+  ### `:is`
+
+  ```css
+  nav :is(a:hover, a:focus) {
+    color: hsla(0, 0%, 20%, 0.6);
+  }
+  ```
+
+  #### specificity of `:is`
+
+  1. This is (0, 0, 1)
+
+  ```css
+  :is(header,
+        footer,{
+          color: red
+        }
+  ```
+
+  2. This is (0,1,0)
+
+  ```css
+  :is(header, footer, .card) {
+    color: red;
+  }
+  ```
+
+  ### `:where`
+
+  This specificity is (0,0,0)
+
+  ```css
+  :where(header, footer, .card) {
+    color: red;
+  }
+  ```
+
+  ### `:target`
+
+  ```css
+  .card:target {
+    border: 2px solid rebeccapurple;
+  }
+  ```
+
+  An element is targeted means that its id is currently being targeted.
+
+  `<section id="section2">Example</section>` and `http://www.example.com/index.html#section2`
+
+  ### `img[alt]`
+
+  `<img />` with `alt` attribute.
+
+  - check if you forgot to add `alt` attribute
+
+  ```css
+  img:not([alt]) {
+    border: 10px solid red;
+  }
+  ```
+
+  ### `nth-child()`
+
+  **Based on the actual html nth child, not the presentation. In case you reordered the element through css, remember this.**
+
+  - `.card:nth-child(2)`
+  - `.card:nth-child(odd)`
+  - `.card:nth-child(even)`
+
+- pseudo element
+
+  > `::pseudo`
+
+  ### `::after`
+
+  ```css
+  .card figcaption::after {
+    content: "hello";
+  }
+  ```
+
+  output: Joe Coderhello
+  The "hello" can't be selected on page, this is a pseudo element
+
+  also `::before`
+
+  ```css
+  p:before {
+    content: open-quote;
+  }
+  ```
+
+  output: `"I design`
+
+  ### `::first-letter`
+
+  This pseudo element count pseudo element as an element.
+
+## Dry CSS
+
+Don't repeat yourself.
+
+## Variables
