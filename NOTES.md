@@ -1694,3 +1694,48 @@ This is the effect:
 Don't repeat yourself.
 
 ## Variables
+
+### `:root`
+
+The :root CSS pseudo-class matches the root element of a tree representing the document. In HTML, :root represents the <html> element and is identical to the selector html, except that its specificity is higher.
+
+## `--BGCOLOR` and `var(--BGCOLOR)`
+
+```css
+:root {
+  --BGCOLOR: #purple;
+}
+
+body {
+  background-color: var(--BGCOLOR);
+}
+```
+
+### a group of values as a variable
+
+`--SHADOWS: 0 6px 5px -5px var(--DARK-COLOR);`
+
+### `box-shadow`
+
+[This is interesting](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
+
+### Dark Mode page
+
+#### `@media` feature `prefers-color-scheme`
+
+The prefers-color-scheme CSS media feature is used to detect if a user has requested light or dark color themes. A user indicates their preference through an operating system setting (e.g. light or dark mode) or a user agent setting.
+
+```css
+@media (prefers-color-scheme: dark) {
+  :root {
+    --BGCOLOR: #000;
+    --ALTBGCOLOR: #333;
+    --RADIAL-COLOR: rgb(217, 217, 217);
+    --SQUARE-BGCOLOR: rgb(202, 174, 202);
+  }
+}
+```
+
+Then, you just let this feature overriding the values of variables, no need to redefine them.
+
+## Functions 
