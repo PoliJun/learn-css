@@ -1881,3 +1881,61 @@ main {
 <video controls="controls" width="300" height="200" name="Video Name">
   <source src="video/grid-template-colums_with_gap.mov" />
 </video>
+
+## Animation
+
+### Visual Formatting Model
+
+[MDN doc](https://developer.mozilla.org/en-US/docs/Web/CSS/Visual_formatting_model)
+
+### Transform and Transition
+
+#### Transform
+
+**Warning: Only transformable elements can be transformed. That is, all elements whose layout is governed by the CSS box model except for: non-replaced inline boxes, table-column boxes, and table-column-group boxes.**
+
+```css
+/* Keyword values */
+transform: none;
+
+/* Function values */
+transform: matrix(1, 2, 3, 4, 5, 6);
+transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+transform: perspective(17px);
+transform: rotate(0.5turn);
+transform: rotate3d(1, 2, 3, 10deg);
+transform: rotateX(10deg);
+transform: rotateY(10deg);
+transform: rotateZ(10deg);
+transform: translate(12px, 50%);
+transform: translate3d(12px, 50%, 3em);
+transform: translateX(2em);
+transform: translateY(3in);
+transform: translateZ(2px);
+transform: scale(2, 0.5);
+transform: scale3d(2.5, 1.2, 0.3);
+transform: scaleX(2);
+transform: scaleY(0.5);
+transform: scaleZ(0.3);
+transform: skew(30deg, 20deg);
+transform: skewX(30deg);
+transform: skewY(1.07rad);
+
+/* Multiple function values */
+transform: translateX(10px) rotate(10deg) translateY(5px);
+transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);
+
+/* Global values */
+transform: inherit;
+transform: initial;
+transform: revert;
+transform: revert-layer;
+transform: unset;
+```
+
+#### Transition
+
+The `transition` CSS property is a shorthand property for `transition-property`, `transition-duration`, `transition-timing-function`, `transition-delay`, and `transition-behavior`.
+
+######  `transition-property`
+
