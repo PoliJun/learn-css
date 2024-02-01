@@ -1582,7 +1582,7 @@ Choose the current min value.
 This is the effect:
 <video width="320" height="240" controls>
 
-<source src="video/Screen Recording 2024-02-01 at 00.39.58.mov"  type="video/quicktime">
+<source src="video/Screen Recording 2024-02-01 at 00.39.58.mov"  type="video/quicktime" />
 </video>
 
 ## Pseudo
@@ -1738,4 +1738,146 @@ The prefers-color-scheme CSS media feature is used to detect if a user has reque
 
 Then, you just let this feature overriding the values of variables, no need to redefine them.
 
-## Functions 
+## Functions
+
+### Color functions
+
+- rgb()
+- hsl()
+- etc.
+
+`radial-gradient(color,color)` also a function.
+`var()` is reference function
+
+### Math functions
+
+- `min()` function
+  > `min(1.75rem, 3vh);`
+- `max()` function
+  > `max(1.75rem, 3vh);`
+- `clamp()`
+  > The `clamp(min, prefer, max)` CSS function clamps a middle value within a range of values between a defined minimum bound and a maximum bound. The function takes three parameters: a minimum value, a preferred value, and a maximum allowed value.
+- `calc()`
+- `brightness()`
+- `hue-rotated`
+- `attr()`
+- `repeat()`
+- `minmax(min, max)`
+
+### `min()` and `max()`
+
+- In `min()` function, We set an absolute value as **Max**.
+- In `max()` function, We set an absolute value as **Minimum**.
+
+### `filter`
+
+The `filter` CSS property applies graphical effects like blur or color shift to an element. Filters are commonly used to adjust the rendering of images, backgrounds, and borders.
+
+Several functions, such as blur() and contrast(), are available to help you achieve predefined effects.
+
+```css
+a:hover,
+a:focus {
+  filter: brightness(150%);
+}
+```
+
+### `hue-rotate()`
+
+**Syntax**
+
+The hue-rotate() function applies a color rotation to the elements on which it is applied.
+css
+
+hue-rotate(angle)
+
+Values
+
+angle
+
+    The relative change in hue of the input sample, specified as an <angle>. A value of 0deg leaves the input unchanged. A positive hue rotation increases the hue value, while a negative rotation decreases the hue value. The initial value for interpolation is 0. There is no minimum or maximum value. The effect of values above 360deg are, given hue-rotate(Ndeg), evaluates to N modulo 360.
+
+The <angle> CSS data type represents an angle value expressed in degrees, gradians, radians, or turns. The following are equivalent:
+css
+
+hue-rotate(-180deg)
+hue-rotate(540deg)
+hue-rotate(200grad)
+hue-rotate(3.14159rad)
+hue-rotate(0.5turn)
+
+### `brightness()`
+
+> Brightness specified as a <number> or a <percentage>. A value less than 100% darkens the input image or element, while a value over 100% brightens it. A value of 0% creates a completely black image or element, while a value of 100% leaves the input unchanged. Other values between 0% to 100% have a linear multiplier effect. Values greater than 100% are allowed, providing brighter results. The initial value for interpolation is 1. Negative values are not allowed. The default value, when nothing is specified, is 1.
+
+```css
+brightness(0) /* Brightness is reduced to zero, so input turns black */
+brightness(0%)
+
+brightness(0.4) /* Brightness of input is reduced to 40%, so input is 60% darker */
+brightness(40%)
+
+brightness(1) /* Brightness of input is not changed */
+brightness(100%)
+
+brightness(2) /* Brightness of input is doubled */
+brightness(200%)
+```
+
+### `data-*`
+
+[`attr()` in css access `data-)`](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+
+### `repeat()` and `minmax()`, `grid-template-columns`
+
+```css
+grid-template-columns: repeat(4, minmax(100px, 300px));
+```
+
+4 columns, min 100px, max 300px.
+
+### Combine `grid-template-columns` and `gap()` effect
+
+```css
+:root {
+  /* Font */
+  --FF: sans-serif;
+  --FS: clamp(1.75rem, 3vh);
+  --FS-SM: clamp(1.25rem, 2vh, 1.5rem);
+  --FS-XL: 3rem;
+  /* COLOR */
+  --BGCOLOR: #475569;
+  --ALT-BGCOLOR: #1e293b;
+  --RADIAL-COLOR: whitesmoke;
+  --LIGHT-COLOR: whitesmoke;
+  --DARK-COLOR: black;
+  /* SQUARE */
+  --SQUARE-BGCOLOR: papayawhip;
+  --SQUARE-SIZE: max(150px, 20vw);
+  /* GENERAL */
+  --PADDING: 0.5em;
+  --SHADOWS: 0 6px 5px -5px var(--DARK-COLOR);
+  --BORDERS: 2px solid var(var(--DARK-COLOR));
+}
+main {
+  flex-grow: 1;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 300px));
+  gap: min(2vw, 20px);
+  padding: var(--PADDING);
+}
+.square {
+  background-color: var(--SQUARE-BGCOLOR);
+  border: var(--BORDERS);
+  border-radius: 15px;
+  display: grid;
+  place-content: center;
+  font-size: var(--FS-XL);
+  box-shadow: var(--SHADOWS);
+}
+```
+
+<video controls="controls" width="300" height="200" name="Video Name">
+  <source src="video/grid-template-colums_with_gap.mov" />
+</video>
