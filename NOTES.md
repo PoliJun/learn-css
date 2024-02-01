@@ -1937,5 +1937,86 @@ transform: unset;
 
 The `transition` CSS property is a shorthand property for `transition-property`, `transition-duration`, `transition-timing-function`, `transition-delay`, and `transition-behavior`.
 
-######  `transition-property`
+###### `transition-property`
 
+- `transition-property`
+- `transition-duration`
+- `transition-delay`
+
+```css
+/* Apply to 1 property */
+/* property name | duration */
+transition: margin-right 4s;
+
+/* property name | duration | delay */
+transition: margin-right 4s 1s;
+
+/* property name | duration | easing function */
+transition: margin-right 4s ease-in-out;
+
+/* property name | duration | easing function | delay */
+transition: margin-right 4s ease-in-out 1s;
+
+/* property name | duration | behavior */
+transition: display 4s allow-discrete;
+
+/* Apply to 2 properties */
+transition: margin-right 4s, color 1s;
+
+/* Apply to all changed properties */
+transition: all 0.5s ease-out allow-discrete;
+transition: 200ms linear 50ms;
+
+/* Global values */
+transition: inherit;
+transition: initial;
+transition: revert;
+transition: revert-layer;
+transition: unset;
+```
+
+### `transition-timing-function`
+
+[MDN link](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function)
+
+### `animation`
+
+```css
+.animate {
+  /* animation-name: slide;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 1s;
+        animation-iteration-count: 5;
+        animation-direction: alternate;
+        animation-fill-mode: forwards; */
+  animation: slide 5s ease-in-out 1s 5 alternate forwards;
+}
+```
+### `@keyframes` 
+
+@keyframes
+
+The @keyframes CSS at-rule controls the intermediate steps in a CSS animation sequence by defining styles for keyframes (or waypoints) along the animation sequence. This gives more control over the intermediate steps of the animation sequence than transitions.
+Syntax
+
+```css
+@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+```
+
+[MDN link](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes)
+
+### Tips
+
+```css
+background-color: transparent;
+```
+to invisible an empty `div` .
