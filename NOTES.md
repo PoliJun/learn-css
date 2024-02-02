@@ -2020,3 +2020,37 @@ Syntax
 background-color: transparent;
 ```
 to invisible an empty `div` .
+
+## Organization
+
+### Suggestions to Organize Your CSS
+
+- Follow Your Team
+- Use comments to create headers
+- Sort properties alphabetically
+- Larger projects follow a naming convention methodology. BEM - Block, Element, Modifier
+
+#### BEM Example
+
+Example
+
+Suppose you have block form with modifiers theme: "xmas" and simple: true and with elements input and submit, and element submit with its own modifier disabled: true for not submitting form while it is not filled:
+HTML
+```html
+<form class="form form--theme-xmas form--simple">
+  <input class="form__input" type="text" />
+  <input
+    class="form__submit form__submit--disabled"
+    type="submit" />
+</form>
+```
+CSS
+```css
+.form { }
+.form--theme-xmas { }
+.form--simple { }
+.form__input { }
+.form__submit { }
+.form__submit--disabled { }
+```
+
