@@ -75,7 +75,7 @@ ul li {
 
 ## **ChatGPT Answer:**
 
-<div style="border:2px solid orange; padding:5px">
+<div style="border:2px solid orange; padding:5px; margin: 20px 0">
 In CSS, properties are inherited by default from a parent element to its children, meaning that children elements inherit certain styles from their parent element. However, not all properties are inherited; some are explicitly set not to inherit by default.
 
 Here are some key points about inheritance in CSS:
