@@ -63,7 +63,7 @@ ul li {
 }
 ```
 
-## Universal Selector
+## Universal Selector `*`
 
 ```css
 * {
@@ -71,7 +71,82 @@ ul li {
 }
 ```
 
-## `font` related is inherited
+## Properties Inherits Common Rules
+
+## **ChatGPT Answer:**
+
+<div style="border:2px solid orange; padding:5px">
+In CSS, properties are inherited by default from a parent element to its children, meaning that children elements inherit certain styles from their parent element. However, not all properties are inherited; some are explicitly set not to inherit by default.
+
+Here are some key points about inheritance in CSS:
+
+1. **Inherited Properties:**
+
+    - Properties such as `font-family`, `font-size`, `color`, `line-height`, and `text-align` are typically inherited from parent elements to their children. This means that if you set the font size on a parent element, its children will inherit that font size unless explicitly overridden.
+
+        ```css
+        /* Parent Element */
+        .parent {
+            font-size: 16px;
+            color: blue;
+        }
+
+        /* Child Element */
+        .child {
+            /* Inherits font-size and color from the parent */
+        }
+        ```
+
+2. **Non-Inherited Properties:**
+
+    - Properties like `margin`, `padding`, `border`, and `width` are not inherited. Children elements do not inherit these properties from their parent.
+
+        ```css
+        /* Parent Element */
+        .parent {
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #000;
+            width: 200px;
+        }
+
+        /* Child Element */
+        .child {
+            /* Does not inherit margin, padding, border, or width from the parent */
+        }
+        ```
+
+3. **Explicitly Set to Inherit:**
+
+    - Some properties that are not inherited by default can be explicitly set to inherit if needed.
+
+        ```css
+        /* Parent Element */
+        .parent {
+            background-color: yellow;
+        }
+
+        /* Child Element */
+        .child {
+            background-color: inherit; /* Explicitly set to inherit from the parent */
+        }
+        ```
+
+4. **Global Inheritance:**
+
+    - The `inherit` keyword can be used globally to force an element to inherit all properties from its parent.
+
+        ```css
+        /* Child Element */
+        .child {
+            all: inherit; /* Inherit all properties from the parent */
+        }
+        ```
+
+It's important to check the documentation for individual CSS properties to understand whether they are inherited by default or not. Some properties have specific inheritance behaviors, and others may depend on the browser implementation. Understanding how inheritance works is crucial for effectively styling and organizing your CSS.
+</div>
+**My Notes:**
+`font` related is inherited
 
 ```css
 body {
@@ -84,21 +159,6 @@ body {
 ```css
 body {
     border: 1px solid black;
-}
-```
-
-## form elements are not inherited
-
-```css
-button,
-input,
-select,
-textarea {
-    font: inherit;
-    /* then it will be inherited font-family: inherit; */
-
-    font-size: inherit;
-    line-height: inherit;
 }
 ```
 
