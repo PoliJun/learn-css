@@ -18,12 +18,12 @@ Three levels of selectors:
 
 ```css
 body {
-  background-color: lightblue;
+    background-color: lightblue;
 }
 
 p {
-  color: purple;
-  font-size: 64px;
+    color: purple;
+    font-size: 64px;
 }
 ```
 
@@ -31,7 +31,7 @@ p {
 
 ```css
 .gray {
-  background-color: gray;
+    background-color: gray;
 }
 ```
 
@@ -40,26 +40,26 @@ p {
 ````css
 id is unique,
 class is not ```css #id {
-  color: red;
+    color: red;
 }
 ````
 
 ## Group CSS Selectors
 
-- comma in between
+-   comma in between
 
 ```css
 h1,
 h2 {
-  color: blue;
+    color: blue;
 }
 ```
 
-- nested selectors
+-   nested selectors
 
 ```css
 ul li {
-  color: red;
+    color: red;
 }
 ```
 
@@ -67,7 +67,7 @@ ul li {
 
 ```css
 * {
-  color: green;
+    color: green;
 }
 ```
 
@@ -75,7 +75,7 @@ ul li {
 
 ```css
 body {
-  font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
 }
 ```
 
@@ -83,7 +83,7 @@ body {
 
 ```css
 body {
-  border: 1px solid black;
+    border: 1px solid black;
 }
 ```
 
@@ -94,11 +94,11 @@ button,
 input,
 select,
 textarea {
-  font: inherit;
-  /* then it will be inherited font-family: inherit; */
+    font: inherit;
+    /* then it will be inherited font-family: inherit; */
 
-  font-size: inherit;
-  line-height: inherit;
+    font-size: inherit;
+    line-height: inherit;
 }
 ```
 
@@ -110,7 +110,7 @@ textarea {
 
 ```css
 p {
-  color: red !important;
+    color: red !important;
 }
 ```
 
@@ -130,30 +130,30 @@ Care has been taken to ensure results are accurate. If you find a defect, please
 
 1. alphabetical
 2. hexadecimal (red, green, blue)
-   > A hexadecimal color code starts with a hash symbol (#).  
-   > It is followed by six characters, which are hexadecimal digits. These digits can be numbers from 0 to 9 and letters from A to F.  
-   > The first two digits represent the red component of the color, the next two represent the green component, and the last two represent the blue component.  
-   > Each pair of digits can range from 00 (0 in decimal, indicating no presence of that color) to FF (255 in decimal, indicating the maximum presence of that color).
-   - shorthand:
-     > If your CSS rule uses the same number for adjacent hex values, you can condense them to one.  
-     > For example, #FF0000 can be shortened to #F00.  
-     > This shortened form gives one digit for red, one digit for green, and one digit for blue.  
-     > This reduces the total number of hex digits from six to three.
+    > A hexadecimal color code starts with a hash symbol (#).  
+    > It is followed by six characters, which are hexadecimal digits. These digits can be numbers from 0 to 9 and letters from A to F.  
+    > The first two digits represent the red component of the color, the next two represent the green component, and the last two represent the blue component.  
+    > Each pair of digits can range from 00 (0 in decimal, indicating no presence of that color) to FF (255 in decimal, indicating the maximum presence of that color).
+    - shorthand:
+        > If your CSS rule uses the same number for adjacent hex values, you can condense them to one.  
+        > For example, #FF0000 can be shortened to #F00.  
+        > This shortened form gives one digit for red, one digit for green, and one digit for blue.  
+        > This reduces the total number of hex digits from six to three.
 3. rgb
 4. rgba (alpha is transparency)
 5. hsl(hue, saturation, lightness)
 
 ```css
 body {
-  background-color: white;
+    background-color: white;
 }
 ```
 
-- shorthand
+-   shorthand
 
 ```css
 body {
-  background: rgb(0, 0, 0);
+    background: rgb(0, 0, 0);
 }
 ```
 
@@ -161,7 +161,7 @@ body {
 
 ```css
 body {
-  color: #ffffff;
+    color: #ffffff;
 }
 ```
 
@@ -169,7 +169,7 @@ body {
 
 ```css
 body {
-  color: rgba(0, 0, 0, 0.5); /* 0.5 is transparency, range 0 to 1 */
+    color: rgba(0, 0, 0, 0.5); /* 0.5 is transparency, range 0 to 1 */
 }
 ```
 
@@ -177,16 +177,16 @@ body {
 
 ### hsl(hue, saturation, lightness)
 
-- hue: 0 to 360
-- saturation: 0% is gray, 100% is full color
-- lightness: 0% is black, 100% is white
+-   hue: 0 to 360
+-   saturation: 0% is gray, 100% is full color
+-   lightness: 0% is black, 100% is white
 
 ## Tools for color
 
-- [collors](https://coolors.co)
-  - It can evaluate the contrast between two colors.
-  - Pick a color and it will generate a color palette for you.
-- [webaim](https://webaim.org)
+-   [collors](https://coolors.co)
+    -   It can evaluate the contrast between two colors.
+    -   Pick a color and it will generate a color palette for you.
+-   [webaim](https://webaim.org)
 
 ## CSS Units
 
@@ -375,28 +375,28 @@ body {
 
 #### Some common use cases
 
-- `px` is absolute unit.
-- `rem` is relative to the root element.
-- `%` is relative to the parent element.
-- `em` is relative to the parent element.
-- `ch` is relative to the width of the "0".
-- `vw` is relative to the width of the viewport.
-  > It's better to use `%` than `vw` if you don't want the horizontal scroll bar show up.
+-   `px` is absolute unit.
+-   `rem` is relative to the root element.
+-   `%` is relative to the parent element.
+-   `em` is relative to the parent element.
+-   `ch` is relative to the width of the "0".
+-   `vw` is relative to the width of the viewport.
+    > It's better to use `%` than `vw` if you don't want the horizontal scroll bar show up.
 
 ```css
 h1 {
-  width: 100vw;
+    width: 100vw;
 }
 ```
 
-- `vh` is relative to the height of the viewport.
+-   `vh` is relative to the height of the viewport.
 
 ##### `em` vs `rem`
 
 ```css
 h1 {
-  font-size: 3rem;
-  padding: 0.5em;
+    font-size: 3rem;
+    padding: 0.5em;
 }
 ```
 
@@ -417,26 +417,26 @@ From inner to outer:
 
 ```css
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 ```
 
-- `content-box` is default
-  > `width` and `height` only apply to content
-- no influence on `margin` and `border`
-  > because `margin` and `border` are outside of a box.
-- `border-box`
-  > `width` and `height` apply to content, padding and border
+-   `content-box` is default
+    > `width` and `height` only apply to content
+-   no influence on `margin` and `border`
+    > because `margin` and `border` are outside of a box.
+-   `border-box`
+    > `width` and `height` apply to content, padding and border
 
 ### margin shorthand
 
 ```css
 .container {
-  margin: 0 auto; /* top and bottom is 0, left and right is auto */
-  margin: 0 auto 0 auto; /* top, right, bottom, left */
-  margin: 1.5rem 2rem 0; /* top, right and left, bottom */
-  padding: 0 20px;
-  border: 1px solid black;
+    margin: 0 auto; /* top and bottom is 0, left and right is auto */
+    margin: 0 auto 0 auto; /* top, right, bottom, left */
+    margin: 1.5rem 2rem 0; /* top, right and left, bottom */
+    padding: 0 20px;
+    border: 1px solid black;
 }
 ```
 
@@ -452,19 +452,19 @@ so many border related properties
 
 outline is outside of border.
 
-- outline-style
-- outline-color
-- outline-width
-- outline-offset
-  > this value can be negative
-- outline
+-   outline-style
+-   outline-color
+-   outline-width
+-   outline-offset
+    > this value can be negative
+-   outline
 
 ### CSS Rounded Borders
 
 ```css
 .radius {
-  border: 100px solid red;
-  border-radius: 50px;
+    border: 100px solid red;
+    border-radius: 50px;
 }
 ```
 
@@ -474,17 +474,17 @@ When `border-radius` is half of `border`, it will be a circle.
 
 ```css
 p {
-  text-decoration: line-through;
-  text-indent: 10px;
-  line-height: 1.5; /* 1.5 times of font-size, 1.2 is default */
-  letter-spacing: 2px; /* space between letters */
-  font-weight: 400; /* 400 is default */
-  font-style: italic; /* normal is default */
-  font-family: Arial, sans-serif; /* sans-serif is default */
+    text-decoration: line-through;
+    text-indent: 10px;
+    line-height: 1.5; /* 1.5 times of font-size, 1.2 is default */
+    letter-spacing: 2px; /* space between letters */
+    font-weight: 400; /* 400 is default */
+    font-style: italic; /* normal is default */
+    font-family: Arial, sans-serif; /* sans-serif is default */
 }
 ```
 
-- `font-family` can have multiple choices, if the first one is not available, it will use the second one.
+-   `font-family` can have multiple choices, if the first one is not available, it will use the second one.
 
 ## external font: google font
 
@@ -502,10 +502,10 @@ At top of CSS file
 
 ```css
 a {
-  color: #0000ff;
-  text-decoration: none; /* underline is default, set it to none would omit the underline of the text link */
-  cursor: not-allowed; /* default is pointer */
-  color: blue; /* default is blue */
+    color: #0000ff;
+    text-decoration: none; /* underline is default, set it to none would omit the underline of the text link */
+    cursor: not-allowed; /* default is pointer */
+    color: blue; /* default is blue */
 }
 ```
 
@@ -515,7 +515,7 @@ a {
 
 ```css
 selector:pseudo-class {
-  property: value;
+    property: value;
 }
 ```
 
@@ -524,24 +524,24 @@ selector:pseudo-class {
 ```css
 /* unvisited link */
 a:link {
-  color: #ff0000;
+    color: #ff0000;
 }
 
 /* visited link */
 a:visited {
-  color: #00ff00;
+    color: #00ff00;
 }
 
 /* mouse over link */
 a:hover,
 a:focus {
-  /* focus is for keyboard navigation (tab) */
-  color: #ff00ff;
+    /* focus is for keyboard navigation (tab) */
+    color: #ff00ff;
 }
 
 /* selected link */
 a:active {
-  color: #0000ff;
+    color: #0000ff;
 }
 ```
 
@@ -760,25 +760,25 @@ Choose hsl color system to copy a color, then just change the hue.
 
 ```css
 a:hover {
-  opacity: 0.9; /* 0 is transparent, 1 is opaque */
+    opacity: 0.9; /* 0 is transparent, 1 is opaque */
 }
 ```
 
 ```css
 a:hover {
-  background-color: rgba(0, 0, 0, 0.5); /* 0 is transparent, 1 is opaque */
+    background-color: rgba(0, 0, 0, 0.5); /* 0 is transparent, 1 is opaque */
 }
 ```
 
 ```css
 a:hover {
-  background-color: hsla(0, 0%, 0%, 0.5); /* 0 is transparent, 1 is opaque */
+    background-color: hsla(0, 0%, 0%, 0.5); /* 0 is transparent, 1 is opaque */
 }
 ```
 
 ## Lists
 
-- `ul` (unordered list)
+-   `ul` (unordered list)
 
 ```css
 ul {
@@ -793,23 +793,23 @@ ul {
 }
 ```
 
-- `ol` (ordered list)
+-   `ol` (ordered list)
 
 ```css
 ol {
-  list-style-type: lower-roman; /* lower-alpha, lower-roman, upper-alpha, upper-roman, etc. */
+    list-style-type: lower-roman; /* lower-alpha, lower-roman, upper-alpha, upper-roman, etc. */
 }
 ```
 
 ### `ol` tag
 
-- example 1:
+-   example 1:
 
 ```html
 <ol start="5" reversed>
-  <li>nnn</li>
-  <li>ddd</li>
-  <li>ccc</li>
+    <li>nnn</li>
+    <li>ddd</li>
+    <li>ccc</li>
 </ol>
 ```
 
@@ -828,13 +828,13 @@ ol{
 }
 ```
 
-- example 2:
+-   example 2:
 
 ```html
 <ol start="5" reversed>
-  <li>nnn</li>
-  <li value="26">ddd</li>
-  <li>ccc</li>
+    <li>nnn</li>
+    <li value="26">ddd</li>
+    <li>ccc</li>
 </ol>
 ```
 
@@ -857,7 +857,7 @@ ol{
 
 ```css
 ul li:nth-child(odd) {
-  color: red;
+    color: red;
 }
 ```
 
@@ -865,10 +865,10 @@ ul li:nth-child(odd) {
 
 ```css
 ::marker {
-  color: red;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1.5rem;
-  content: "👉"; /* This can be svg etc. */
+    color: red;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.5rem;
+    content: "👉"; /* This can be svg etc. */
 }
 ```
 
@@ -876,18 +876,18 @@ ul li:nth-child(odd) {
 
 ## `display`
 
-- `display: none;` will remove the element from the DOM.
-- `display: block;` will make the element a block element (like `<p>`).
-- `display: inline;` will make the element an inline element (like `<span>`).
-- `display: inline-block;` will make the element an inline block element (like `<img>`).
+-   `display: none;` will remove the element from the DOM.
+-   `display: block;` will make the element a block element (like `<p>`).
+-   `display: inline;` will make the element an inline element (like `<span>`).
+-   `display: inline-block;` will make the element an inline block element (like `<img>`).
 
 ```css
 ul li {
-  display: block;
+    display: block;
 }
 
 li a:hover {
-  background-color: #111;
+    background-color: #111;
 }
 ```
 
@@ -897,7 +897,7 @@ With `display: block;`, the whole `li` will be clickable. Not only the text.
 
 ```css
 li:last-child {
-  border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
 }
 ```
 
@@ -933,20 +933,20 @@ For inline elements, `margin` and `padding` are applied differently than block-l
 **Display:**
 The `display` property determines how an element is displayed. The default value for most elements is either `block` or `inline`.
 
-- `display: inline;` makes the element display inline, like `<span>`.
-- `display: block;` makes the element display as a block, like `<div>`.
-- `display: inline-block;` is a hybrid of `inline` and `block`. It allows the element to sit inline with other elements, but you can still set width and height values, which isn't possible with `display: inline;`.
+-   `display: inline;` makes the element display inline, like `<span>`.
+-   `display: block;` makes the element display as a block, like `<div>`.
+-   `display: inline-block;` is a hybrid of `inline` and `block`. It allows the element to sit inline with other elements, but you can still set width and height values, which isn't possible with `display: inline;`.
 
 Here's an example:
 
 ```html
 <span
-  style="margin: 10px; padding: 10px; display: inline-block; background-color: lightblue;"
-  >This is an inline-block element.</span
+    style="margin: 10px; padding: 10px; display: inline-block; background-color: lightblue;"
+    >This is an inline-block element.</span
 >
 <span
-  style="margin: 10px; padding: 10px; display: inline; background-color: lightgreen;"
-  >This is an inline element.</span
+    style="margin: 10px; padding: 10px; display: inline; background-color: lightgreen;"
+    >This is an inline element.</span
 >
 ```
 
@@ -956,26 +956,26 @@ In the above example, the first span with `display: inline-block;` respects all 
 
 ```css
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: right;
-  background-color: #333;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    background-color: #333;
 }
 
 li {
-  display: inline-block;
+    display: inline-block;
 }
 
 li a {
-  display: block;
-  color: white;
-  padding: 16px;
-  text-decoration: none;
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
 }
 
 li a:hover {
-  background-color: #111;
+    background-color: #111;
 }
 ```
 
@@ -983,16 +983,16 @@ li a:hover {
 
 ```html
 <style>
-  .float {
-    float: left;
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    background-color: red;
-  }
-  p {
-    margin: 10px;
-  }
+    .float {
+        float: left;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        background-color: red;
+    }
+    p {
+        margin: 10px;
+    }
 </style>
 <div class="float"></div>
 <p>afaewaewfawfeawfaweawefawew</p>
@@ -1005,18 +1005,18 @@ li a:hover {
 <p>afaewaewfawfeawfaweawefawew</p>
 ```
 
-- In this case, `p` won't margin with the `div` with class `float`. Because `float` will take the element out of the normal flow. Use `margin` on `.float` instead.
-- `clear` would illiminate the effect of `float`.
+-   In this case, `p` won't margin with the `div` with class `float`. Because `float` will take the element out of the normal flow. Use `margin` on `.float` instead.
+-   `clear` would illiminate the effect of `float`.
 
 ### `display: flow-root;`
 
 ```html
 <section>
-  <div class="float">Float</div>
-  <h3 id="d_h">
-    Section Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum,
-    alias!
-  </h3>
+    <div class="float">Float</div>
+    <h3 id="d_h">
+        Section Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum,
+        alias!
+    </h3>
 </section>
 ```
 
@@ -1027,7 +1027,7 @@ There are two ways to fix this
 
 ```css
 .container {
-  display: flow-root;
+    display: flow-root;
 }
 ```
 
@@ -1035,7 +1035,7 @@ There are two ways to fix this
 
 ```css
 .container {
-  overflow: auto;
+    overflow: auto;
 }
 ```
 
@@ -1050,7 +1050,7 @@ When you set `overflow: auto;` on a container, it means the container will provi
 
 ```css
 .container {
-  overflow: auto;
+    overflow: auto;
 }
 ```
 
@@ -1059,7 +1059,7 @@ The `display: flow-root;` property creates a new block formatting context, meani
 
 ```css
 .container {
-  display: flow-root;
+    display: flow-root;
 }
 ```
 
@@ -1069,26 +1069,26 @@ The main difference is that `overflow: auto;` can potentially introduce scrollba
 
 ```css
 .clear {
-  clear: both;
+    clear: both;
 }
 ```
 
 ## `colums`
 
-- column-count (number of columns)
-- column-width (width of each column)
-  > if you set both `column-count` and `column-width`, the browser will choose the one that fits the screen better. This means that column count will be ignored if the width of each column is too wide to fit the screen.
-  > shorthand
+-   column-count (number of columns)
+-   column-width (width of each column)
+    > if you set both `column-count` and `column-width`, the browser will choose the one that fits the screen better. This means that column count will be ignored if the width of each column is too wide to fit the screen.
+    > shorthand
 
 ```css
 .container {
-  columns: 100px 3; /* width, number of columns */
+    columns: 100px 3; /* width, number of columns */
 }
 ```
 
 ```css
 .container {
-  columns: 4 250px; /* number of columns, width */
+    columns: 4 250px; /* number of columns, width */
 }
 ```
 
@@ -1096,8 +1096,8 @@ The main difference is that `overflow: auto;` can potentially introduce scrollba
 
 ```css
 .columns {
-  columns: 250px 4;
-  column-rule: 3px solid #333;
+    columns: 250px 4;
+    column-rule: 3px solid #333;
 }
 ```
 
@@ -1105,9 +1105,9 @@ The main difference is that `overflow: auto;` can potentially introduce scrollba
 
 ```css
 .columns {
-  columns: 250px 4;
-  column-rule: 3px solid #333;
-  column-gap: 20px;
+    columns: 250px 4;
+    column-rule: 3px solid #333;
+    column-gap: 20px;
 }
 ```
 
@@ -1117,7 +1117,7 @@ The main difference is that `overflow: auto;` can potentially introduce scrollba
 
 ### Quotation mark
 
-- Heavy Double Turned Comma Quotation Mark Ornament ❝
+-   Heavy Double Turned Comma Quotation Mark Ornament ❝
 
 <table>
   <tbody>
@@ -1195,11 +1195,11 @@ The column-span: all; CSS property is used within a multi-column layout. It allo
 
 ```css
 .columns .quote {
-  font-size: 3rem;
-  text-align: center;
-  color: #333;
-  column-span: all; /* this is not supported by all browsers */
-  margin: 2rem auto 2rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #333;
+    column-span: all; /* this is not supported by all browsers */
+    margin: 2rem auto 2rem;
 }
 ```
 
@@ -1207,8 +1207,8 @@ The column-span: all; CSS property is used within a multi-column layout. It allo
 
 ```html
 <p class="quote">
-  &#10077;Where's my rug, man?&#10078;
-  <span class="nowrap">&#8212;The dude</span>
+    &#10077;Where's my rug, man?&#10078;
+    <span class="nowrap">&#8212;The dude</span>
 </p>
 ```
 
@@ -1234,11 +1234,11 @@ CSS property position helps manipulate position of an element in a web page. The
 
 ```css
 .absolute {
-  background-color: blue;
-  position: absolute;
-  top: 0;
-  left: -10000px; /* this is a hack */
-  z-index: 1;
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: -10000px; /* this is a hack */
+    z-index: 1;
 }
 ```
 
@@ -1252,113 +1252,113 @@ Scroll smoothly when click:
 
 ```html
 <section id="one">
-  <header class="blue">Header One</header>
-  <h2>One</h2>
+    <header class="blue">Header One</header>
+    <h2>One</h2>
 </section>
 <section id="two">
-  <header class="red">Header Two</header>
-  <h2>Two</h2>
+    <header class="red">Header Two</header>
+    <h2>Two</h2>
 </section>
 <section id="three">
-  <header class="green">Header Three</header>
-  <h2>Three</h2>
+    <header class="green">Header Three</header>
+    <h2>Three</h2>
 </section>
 <footer>
-  <a href="#one">One</a>
-  <a href="#two">Two</a>
-  <a href="#three">Three</a>
+    <a href="#one">One</a>
+    <a href="#two">Two</a>
+    <a href="#three">Three</a>
 </footer>
 ```
 
 # Grid Layout
 
-- `display: grid;`
-- `grid-auto-flow: column;`
-- `grid-template-columns: 200px 1fr 2fr;`
-- `grid-template-columns: repeat(4,1fr 2fr);`
-  > row as so.
-- `grid-column-start: 1;` `grid-column-end: 4;` and `grid-column: 1/4;`
-- `grid-row-start: 1;` `grid-row-end: 3;` and `grid-row: 1/3;`
-- `align-content: start;` of grid layout
-- `align-content: center;` `justify-content: center;` and `place-content: end center;` or `place-content: center`
-- `grid-template-areas`
+-   `display: grid;`
+-   `grid-auto-flow: column;`
+-   `grid-template-columns: 200px 1fr 2fr;`
+-   `grid-template-columns: repeat(4,1fr 2fr);`
+    > row as so.
+-   `grid-column-start: 1;` `grid-column-end: 4;` and `grid-column: 1/4;`
+-   `grid-row-start: 1;` `grid-row-end: 3;` and `grid-row: 1/3;`
+-   `align-content: start;` of grid layout
+-   `align-content: center;` `justify-content: center;` and `place-content: end center;` or `place-content: center`
+-   `grid-template-areas`
 
 ```css
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body {
-  font-family: sans-serif;
-  min-height: 100vh;
+    font-family: sans-serif;
+    min-height: 100vh;
 
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  grid-auto-rows: 75px auto 75px;
-  grid-template-areas:
-    "hd hd hd hd hd hd hd hd hd"
-    "mn mn mn mn mn mn mn sb sb"
-    "ft ft ft ft ft ft ft ft ft";
-  gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: 75px auto 75px;
+    grid-template-areas:
+        "hd hd hd hd hd hd hd hd hd"
+        "mn mn mn mn mn mn mn sb sb"
+        "ft ft ft ft ft ft ft ft ft";
+    gap: 1rem;
 }
 .el {
-  background-color: rebeccapurple;
-  color: #fff;
-  display: grid;
-  place-content: center;
+    background-color: rebeccapurple;
+    color: #fff;
+    display: grid;
+    place-content: center;
 }
 .header {
-  grid-area: hd;
+    grid-area: hd;
 }
 
 .sidebar {
-  grid-area: sb;
-  background-color: #00f;
+    grid-area: sb;
+    background-color: #00f;
 }
 .footer {
-  grid-area: ft;
+    grid-area: ft;
 }
 
 .container {
-  min-height: 400px;
-  display: grid;
-  /* grid-auto-flow: column; */
-  /* grid-template-columns: 200px 1fr 2fr; */
-  grid-template-columns: repeat(2, 1fr 2fr);
-  /* grid-auto-rows: 200px; */
-  grid-auto-rows: minmax(150px, auto);
-  /* grid-template-rows: repeat(2,1fr 2fr); */
-  row-gap: 1em;
-  /* column-gap: 1em; */
-  /* gap: 1em 0.5em; */
-  gap: 1em;
-  grid-area: mn;
+    min-height: 400px;
+    display: grid;
+    /* grid-auto-flow: column; */
+    /* grid-template-columns: 200px 1fr 2fr; */
+    grid-template-columns: repeat(2, 1fr 2fr);
+    /* grid-auto-rows: 200px; */
+    grid-auto-rows: minmax(150px, auto);
+    /* grid-template-rows: repeat(2,1fr 2fr); */
+    row-gap: 1em;
+    /* column-gap: 1em; */
+    /* gap: 1em 0.5em; */
+    gap: 1em;
+    grid-area: mn;
 }
 .box {
-  background-color: #000;
-  color: #fff;
-  font-size: 2rem;
-  padding: 0.5rem;
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
 }
 .box:first-child {
-  background-color: #00f;
-  /* grid-column-start: 1;
+    background-color: #00f;
+    /* grid-column-start: 1;
         grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 3; */
-  grid-column: 1/4;
-  grid-row: 1/3;
+    grid-column: 1/4;
+    grid-row: 1/3;
 
-  display: grid;
-  /* align-content: center;
+    display: grid;
+    /* align-content: center;
         justify-content: center; */
-  place-content: center;
+    place-content: center;
 }
 .box:nth-child(2) {
-  background-color: purple;
-  grid-column: 1/5;
-  grid-row: 3/4;
+    background-color: purple;
+    grid-column: 1/5;
+    grid-row: 3/4;
 }
 ```
 
@@ -1368,42 +1368,55 @@ body {
 
 ## Images
 
-- `<img>` is inline tag
-- `<figure>` to markup a photo
-  > Use a <figure> element to mark up a photo in a document, and a <figcaption> element to define a caption for the photo:
-- `background-image: url('img/acg.gy_04.jpg');`
-- `background-repeat: no-repeat;`
-- `background-position`
-  > which part of the image
-- `background-size`
-  > [Try it](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
-- `background-image: url("img/acg.gy_10.jpg"),linear-gradient(to left, black, purple, #fff);`
-  > also `background-image: liner-gradient()`, this is a rainbow.
-- `background-clip: text` with `color`
-  > This will cause the bg-image omitted, If set color some transparency, you can see the bg-image will only show in the font itself.  
-  > [It can also clip others such as border-box, padding-box, etc.](https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip)
+-   `<img>` is inline tag
+-   `<figure>` to markup a photo
+    > Use a <figure> element to mark up a photo in a document, and a <figcaption> element to define a caption for the photo:
+-   `background-image: url('img/acg.gy_04.jpg');`
+-   `background-repeat: no-repeat;`
+-   `background-position`
+    > which part of the image
+-   `background-size`
+    > [Try it](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
+-   `background-image: url("img/acg.gy_10.jpg"),linear-gradient(to left, black, purple, #fff);`
+    > also `background-image: liner-gradient()`, this is a rainbow.
+-   `background-clip: text` with `color`
+    > This will cause the bg-image omitted, If set color some transparency, you can see the bg-image will only show in the font itself.  
+    > [It can also clip others such as border-box, padding-box, etc.](https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip)
 
 ### Background color advanced
 
-Set background image in parent container, then in child box, set background color(better use hsl system: hue, saturation, lightness, transparency), then you can optimize the emphasize of the background image
+Set background image (url), then, set background color(better use hsl system: hue, saturation, lightness, transparency), then you can optimize the emphasize of the background image.
+
+OR:  
+like this:
+
+```scss
+.home {
+    background: linear-gradient(
+            to right,
+            rgba($primary-color, 0.9),
+            rgba($primary-color, 0.3)
+        ), url("../img/model-1.jpg");
+}
+```
 
 ```css
 .container {
-  background-color: rgb(251, 210, 156);
-  background-image: url("img/acg.gy_04.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-color: rgb(251, 210, 156);
+    background-image: url("img/acg.gy_04.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .hero {
-  border-bottom: 2px solid #000;
-  padding: 20px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 30px;
+    border-bottom: 2px solid #000;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
 
-  background-color: hsla(15, 100%, 31%, 0.17);
-  /* background-color: rgb(251, 210, 156);
+    background-color: hsla(15, 100%, 31%, 0.17);
+    /* background-color: rgb(251, 210, 156);
         background-image: url("img/acg.gy_04.jpg");
         background-repeat: no-repeat;
         background-size: cover;*/
@@ -1428,7 +1441,7 @@ Syntax:
 
 ```css
 @media media type and (condition: breakpoint) {
-  /*  css rules */
+    /*  css rules */
 }
 ```
 
@@ -1446,50 +1459,50 @@ Here's a breakdown of @media:
 
 ```css
 @media media_query {
-  /* CSS styles to apply if the media query matches */
+    /* CSS styles to apply if the media query matches */
 }
 ```
 
-- **media_query:** This is the essential part, specifying the conditions under which the styles within the block will be applied. It can target various aspects like:
-  - **Device type:** `screen`, `print`, `speech`, etc.
-  - **Screen size:** `width`, `height`, `min-width`, `max-width`, etc.
-  - **Orientation:** `portrait`, `landscape`
-  - **Resolution:** `dpi`
-  - **Color scheme:** `prefers-color-scheme: dark`
-  - And many more!
+-   **media_query:** This is the essential part, specifying the conditions under which the styles within the block will be applied. It can target various aspects like:
+    -   **Device type:** `screen`, `print`, `speech`, etc.
+    -   **Screen size:** `width`, `height`, `min-width`, `max-width`, etc.
+    -   **Orientation:** `portrait`, `landscape`
+    -   **Resolution:** `dpi`
+    -   **Color scheme:** `prefers-color-scheme: dark`
+    -   And many more!
 
 **Example:**
 
 ```css
 @media only screen and (max-width: 768px) {
-  /* Styles for screens smaller than 768px wide */
-  .content {
-    font-size: 16px;
-    padding: 10px;
-  }
+    /* Styles for screens smaller than 768px wide */
+    .content {
+        font-size: 16px;
+        padding: 10px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  /* Styles for screens between 769px and 1024px wide */
-  .content {
-    font-size: 18px;
-    padding: 20px;
-  }
+    /* Styles for screens between 769px and 1024px wide */
+    .content {
+        font-size: 18px;
+        padding: 20px;
+    }
 }
 ```
 
 **Benefits of using @media:**
 
-- **Improved user experience:** Ensures your website is usable and visually appealing on different devices.
-- **Accessibility:** Helps cater to users with different screen sizes and needs.
-- **Search engine optimization (SEO):** Responsive websites typically rank better in search results.
-- **Efficient code:** Avoids unnecessary styles being applied to devices that don't need them.
+-   **Improved user experience:** Ensures your website is usable and visually appealing on different devices.
+-   **Accessibility:** Helps cater to users with different screen sizes and needs.
+-   **Search engine optimization (SEO):** Responsive websites typically rank better in search results.
+-   **Efficient code:** Avoids unnecessary styles being applied to devices that don't need them.
 
 **Additional points:**
 
-- You can combine multiple media queries using logical operators like `and`, `or`, and `not` for more granular control.
-- Media queries are essential for responsive web design, but they can also be used for other purposes like print styles or targeting specific browsers.
-- There are various media query features available, so explore the possibilities to achieve your desired design adaptations.
+-   You can combine multiple media queries using logical operators like `and`, `or`, and `not` for more granular control.
+-   Media queries are essential for responsive web design, but they can also be used for other purposes like print styles or targeting specific browsers.
+-   There are various media query features available, so explore the possibilities to achieve your desired design adaptations.
 
 Remember, effectively using `@media` requires understanding your target audience and their devices. By implementing well-structured media queries, you can create a website that delivers a seamless and enjoyable experience for everyone.
 
@@ -1507,8 +1520,8 @@ The `aspect-ratio` property in CSS is used to set an intrinsic aspect ratio for 
 aspect-ratio: <width> / <height>;
 ```
 
-- `<width>`: The width of the aspect ratio.
-- `<height>`: The height of the aspect ratio.
+-   `<width>`: The width of the aspect ratio.
+-   `<height>`: The height of the aspect ratio.
 
 #### Example:
 
@@ -1516,23 +1529,23 @@ Let's say you have an image, and you want to maintain a 16:9 aspect ratio for it
 
 ```css
 .image-container {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  /* Other styling properties */
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    /* Other styling properties */
 }
 
 .image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Optional: Maintain aspect ratio and cover container */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Optional: Maintain aspect ratio and cover container */
 }
 ```
 
 In this example:
 
-- The `aspect-ratio: 16 / 9;` is applied to the `.image-container`, setting the desired aspect ratio.
-- The `width: 100%;` ensures that the container takes up the full width of its parent.
-- Inside the container, the `img` element inherits the aspect ratio, and `object-fit: cover;` ensures the image covers the container while maintaining the aspect ratio.
+-   The `aspect-ratio: 16 / 9;` is applied to the `.image-container`, setting the desired aspect ratio.
+-   The `width: 100%;` ensures that the container takes up the full width of its parent.
+-   Inside the container, the `img` element inherits the aspect ratio, and `object-fit: cover;` ensures the image covers the container while maintaining the aspect ratio.
 
 #### Browser Support:
 
@@ -1542,22 +1555,22 @@ As of my last knowledge update in January 2022, the `aspect-ratio` property has 
 
 1. **Responsive Images:**
 
-   - Maintain a specific aspect ratio for images while making them responsive to different screen sizes.
+    - Maintain a specific aspect ratio for images while making them responsive to different screen sizes.
 
 2. **Video Containers:**
 
-   - Set the aspect ratio for a video container to ensure that videos maintain the correct proportions.
+    - Set the aspect ratio for a video container to ensure that videos maintain the correct proportions.
 
 3. **Card Components:**
 
-   - Create card components with a consistent aspect ratio for better visual appeal.
+    - Create card components with a consistent aspect ratio for better visual appeal.
 
 4. **Layouts:**
-   - Establish consistent aspect ratios for layout elements to create visually pleasing designs.
+    - Establish consistent aspect ratios for layout elements to create visually pleasing designs.
 
 #### Note:
 
-- The `aspect-ratio` property is part of the CSS Box Sizing Module Level 4, and its behavior is somewhat similar to using the `padding-top` or `padding-bottom` trick for maintaining aspect ratios.
+-   The `aspect-ratio` property is part of the CSS Box Sizing Module Level 4, and its behavior is somewhat similar to using the `padding-top` or `padding-bottom` trick for maintaining aspect ratios.
 
 Always consider browser compatibility and use feature detection or fallbacks if necessary, especially if supporting older browsers is a requirement.
 
@@ -1572,10 +1585,10 @@ Choose the current min value.
 
 ```css
 @media screen and (min-width: 1200px) {
-  .card {
-    /* Remove calc() - min() supports math! */
-    width: min(calc(33% - 1rem), 500px);
-  }
+    .card {
+        /* Remove calc() - min() supports math! */
+        width: min(calc(33% - 1rem), 500px);
+    }
 }
 ```
 
@@ -1587,107 +1600,107 @@ This is the effect:
 
 ## Pseudo
 
-- pseudo class
+-   pseudo class
 
-  > `:pseudo`
+    > `:pseudo`
 
-  ### `:is`
+    ### `:is`
 
-  ```css
-  nav :is(a:hover, a:focus) {
-    color: hsla(0, 0%, 20%, 0.6);
-  }
-  ```
+    ```css
+    nav :is(a:hover, a:focus) {
+        color: hsla(0, 0%, 20%, 0.6);
+    }
+    ```
 
-  #### specificity of `:is`
+    #### specificity of `:is`
 
-  1. This is (0, 0, 1)
+    1. This is (0, 0, 1)
 
-  ```css
-  :is(header,
-        footer,{
-          color: red
-        }
-  ```
+    ```css
+    :is(header,
+          footer,{
+            color: red
+          }
+    ```
 
-  2. This is (0,1,0)
+    2. This is (0,1,0)
 
-  ```css
-  :is(header, footer, .card) {
-    color: red;
-  }
-  ```
+    ```css
+    :is(header, footer, .card) {
+        color: red;
+    }
+    ```
 
-  ### `:where`
+    ### `:where`
 
-  This specificity is (0,0,0)
+    This specificity is (0,0,0)
 
-  ```css
-  :where(header, footer, .card) {
-    color: red;
-  }
-  ```
+    ```css
+    :where(header, footer, .card) {
+        color: red;
+    }
+    ```
 
-  ### `:target`
+    ### `:target`
 
-  ```css
-  .card:target {
-    border: 2px solid rebeccapurple;
-  }
-  ```
+    ```css
+    .card:target {
+        border: 2px solid rebeccapurple;
+    }
+    ```
 
-  An element is targeted means that its id is currently being targeted.
+    An element is targeted means that its id is currently being targeted.
 
-  `<section id="section2">Example</section>` and `http://www.example.com/index.html#section2`
+    `<section id="section2">Example</section>` and `http://www.example.com/index.html#section2`
 
-  ### `img[alt]`
+    ### `img[alt]`
 
-  `<img />` with `alt` attribute.
+    `<img />` with `alt` attribute.
 
-  - check if you forgot to add `alt` attribute
+    -   check if you forgot to add `alt` attribute
 
-  ```css
-  img:not([alt]) {
-    border: 10px solid red;
-  }
-  ```
+    ```css
+    img:not([alt]) {
+        border: 10px solid red;
+    }
+    ```
 
-  ### `nth-child()`
+    ### `nth-child()`
 
-  **Based on the actual html nth child, not the presentation. In case you reordered the element through css, remember this.**
+    **Based on the actual html nth child, not the presentation. In case you reordered the element through css, remember this.**
 
-  - `.card:nth-child(2)`
-  - `.card:nth-child(odd)`
-  - `.card:nth-child(even)`
+    -   `.card:nth-child(2)`
+    -   `.card:nth-child(odd)`
+    -   `.card:nth-child(even)`
 
-- pseudo element
+-   pseudo element
 
-  > `::pseudo`
+    > `::pseudo`
 
-  ### `::after`
+    ### `::after`
 
-  ```css
-  .card figcaption::after {
-    content: "hello";
-  }
-  ```
+    ```css
+    .card figcaption::after {
+        content: "hello";
+    }
+    ```
 
-  output: Joe Coderhello
-  The "hello" can't be selected on page, this is a pseudo element
+    output: Joe Coderhello
+    The "hello" can't be selected on page, this is a pseudo element
 
-  also `::before`
+    also `::before`
 
-  ```css
-  p:before {
-    content: open-quote;
-  }
-  ```
+    ```css
+    p:before {
+        content: open-quote;
+    }
+    ```
 
-  output: `"I design`
+    output: `"I design`
 
-  ### `::first-letter`
+    ### `::first-letter`
 
-  This pseudo element count pseudo element as an element.
+    This pseudo element count pseudo element as an element.
 
 ## Dry CSS
 
@@ -1703,11 +1716,11 @@ The :root CSS pseudo-class matches the root element of a tree representing the d
 
 ```css
 :root {
-  --BGCOLOR: #purple;
+    --BGCOLOR: #purple;
 }
 
 body {
-  background-color: var(--BGCOLOR);
+    background-color: var(--BGCOLOR);
 }
 ```
 
@@ -1727,12 +1740,12 @@ The prefers-color-scheme CSS media feature is used to detect if a user has reque
 
 ```css
 @media (prefers-color-scheme: dark) {
-  :root {
-    --BGCOLOR: #000;
-    --ALTBGCOLOR: #333;
-    --RADIAL-COLOR: rgb(217, 217, 217);
-    --SQUARE-BGCOLOR: rgb(202, 174, 202);
-  }
+    :root {
+        --BGCOLOR: #000;
+        --ALTBGCOLOR: #333;
+        --RADIAL-COLOR: rgb(217, 217, 217);
+        --SQUARE-BGCOLOR: rgb(202, 174, 202);
+    }
 }
 ```
 
@@ -1742,32 +1755,32 @@ Then, you just let this feature overriding the values of variables, no need to r
 
 ### Color functions
 
-- rgb()
-- hsl()
-- etc.
+-   rgb()
+-   hsl()
+-   etc.
 
 `radial-gradient(color,color)` also a function.
 `var()` is reference function
 
 ### Math functions
 
-- `min()` function
-  > `min(1.75rem, 3vh);`
-- `max()` function
-  > `max(1.75rem, 3vh);`
-- `clamp()`
-  > The `clamp(min, prefer, max)` CSS function clamps a middle value within a range of values between a defined minimum bound and a maximum bound. The function takes three parameters: a minimum value, a preferred value, and a maximum allowed value.
-- `calc()`
-- `brightness()`
-- `hue-rotated`
-- `attr()`
-- `repeat()`
-- `minmax(min, max)`
+-   `min()` function
+    > `min(1.75rem, 3vh);`
+-   `max()` function
+    > `max(1.75rem, 3vh);`
+-   `clamp()`
+    > The `clamp(min, prefer, max)` CSS function clamps a middle value within a range of values between a defined minimum bound and a maximum bound. The function takes three parameters: a minimum value, a preferred value, and a maximum allowed value.
+-   `calc()`
+-   `brightness()`
+-   `hue-rotated`
+-   `attr()`
+-   `repeat()`
+-   `minmax(min, max)`
 
 ### `min()` and `max()`
 
-- In `min()` function, We set an absolute value as **Max**.
-- In `max()` function, We set an absolute value as **Minimum**.
+-   In `min()` function, We set an absolute value as **Max**.
+-   In `max()` function, We set an absolute value as **Minimum**.
 
 ### `filter`
 
@@ -1778,7 +1791,7 @@ Several functions, such as blur() and contrast(), are available to help you achi
 ```css
 a:hover,
 a:focus {
-  filter: brightness(150%);
+    filter: brightness(150%);
 }
 ```
 
@@ -1840,41 +1853,41 @@ grid-template-columns: repeat(4, minmax(100px, 300px));
 
 ```css
 :root {
-  /* Font */
-  --FF: sans-serif;
-  --FS: clamp(1.75rem, 3vh);
-  --FS-SM: clamp(1.25rem, 2vh, 1.5rem);
-  --FS-XL: 3rem;
-  /* COLOR */
-  --BGCOLOR: #475569;
-  --ALT-BGCOLOR: #1e293b;
-  --RADIAL-COLOR: whitesmoke;
-  --LIGHT-COLOR: whitesmoke;
-  --DARK-COLOR: black;
-  /* SQUARE */
-  --SQUARE-BGCOLOR: papayawhip;
-  --SQUARE-SIZE: max(150px, 20vw);
-  /* GENERAL */
-  --PADDING: 0.5em;
-  --SHADOWS: 0 6px 5px -5px var(--DARK-COLOR);
-  --BORDERS: 2px solid var(var(--DARK-COLOR));
+    /* Font */
+    --FF: sans-serif;
+    --FS: clamp(1.75rem, 3vh);
+    --FS-SM: clamp(1.25rem, 2vh, 1.5rem);
+    --FS-XL: 3rem;
+    /* COLOR */
+    --BGCOLOR: #475569;
+    --ALT-BGCOLOR: #1e293b;
+    --RADIAL-COLOR: whitesmoke;
+    --LIGHT-COLOR: whitesmoke;
+    --DARK-COLOR: black;
+    /* SQUARE */
+    --SQUARE-BGCOLOR: papayawhip;
+    --SQUARE-SIZE: max(150px, 20vw);
+    /* GENERAL */
+    --PADDING: 0.5em;
+    --SHADOWS: 0 6px 5px -5px var(--DARK-COLOR);
+    --BORDERS: 2px solid var(var(--DARK-COLOR));
 }
 main {
-  flex-grow: 1;
+    flex-grow: 1;
 
-  display: grid;
-  grid-template-columns: repeat(4, minmax(100px, 300px));
-  gap: min(2vw, 20px);
-  padding: var(--PADDING);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 300px));
+    gap: min(2vw, 20px);
+    padding: var(--PADDING);
 }
 .square {
-  background-color: var(--SQUARE-BGCOLOR);
-  border: var(--BORDERS);
-  border-radius: 15px;
-  display: grid;
-  place-content: center;
-  font-size: var(--FS-XL);
-  box-shadow: var(--SHADOWS);
+    background-color: var(--SQUARE-BGCOLOR);
+    border: var(--BORDERS);
+    border-radius: 15px;
+    display: grid;
+    place-content: center;
+    font-size: var(--FS-XL);
+    box-shadow: var(--SHADOWS);
 }
 ```
 
@@ -1939,9 +1952,9 @@ The `transition` CSS property is a shorthand property for `transition-property`,
 
 ###### `transition-property`
 
-- `transition-property`
-- `transition-duration`
-- `transition-delay`
+-   `transition-property`
+-   `transition-duration`
+-   `transition-delay`
 
 ```css
 /* Apply to 1 property */
@@ -1983,17 +1996,18 @@ transition: unset;
 
 ```css
 .animate {
-  /* animation-name: slide;
+    /* animation-name: slide;
         animation-duration: 5s;
         animation-timing-function: ease-in-out;
         animation-delay: 1s;
         animation-iteration-count: 5;
         animation-direction: alternate;
         animation-fill-mode: forwards; */
-  animation: slide 5s ease-in-out 1s 5 alternate forwards;
+    animation: slide 5s ease-in-out 1s 5 alternate forwards;
 }
 ```
-### `@keyframes` 
+
+### `@keyframes`
 
 @keyframes
 
@@ -2002,13 +2016,13 @@ Syntax
 
 ```css
 @keyframes slidein {
-  from {
-    transform: translateX(0%);
-  }
+    from {
+        transform: translateX(0%);
+    }
 
-  to {
-    transform: translateX(100%);
-  }
+    to {
+        transform: translateX(100%);
+    }
 }
 ```
 
@@ -2019,16 +2033,17 @@ Syntax
 ```css
 background-color: transparent;
 ```
+
 to invisible an empty `div` .
 
 ## Organization
 
 ### Suggestions to Organize Your CSS
 
-- Follow Your Team
-- Use comments to create headers
-- Sort properties alphabetically
-- Larger projects follow a naming convention methodology. BEM - Block, Element, Modifier
+-   Follow Your Team
+-   Use comments to create headers
+-   Sort properties alphabetically
+-   Larger projects follow a naming convention methodology. BEM - Block, Element, Modifier
 
 #### BEM Example
 
@@ -2036,25 +2051,33 @@ Example
 
 Suppose you have block form with modifiers theme: "xmas" and simple: true and with elements input and submit, and element submit with its own modifier disabled: true for not submitting form while it is not filled:
 HTML
+
 ```html
 <form class="form form--theme-xmas form--simple">
-  <input class="form__input" type="text" />
-  <input
-    class="form__submit form__submit--disabled"
-    type="submit" />
+    <input class="form__input" type="text" />
+    <input class="form__submit form__submit--disabled" type="submit" />
 </form>
 ```
+
 CSS
+
 ```css
-.form { }
-.form--theme-xmas { }
-.form--simple { }
-.form__input { }
-.form__submit { }
-.form__submit--disabled { }
+.form {
+}
+.form--theme-xmas {
+}
+.form--simple {
+}
+.form__input {
+}
+.form__submit {
+}
+.form__submit--disabled {
+}
 ```
 
 ### BEM Example by ChatGPT
+
 BEM (Block, Element, Modifier) is a methodology for naming and organizing CSS classes in a way that enhances code maintainability and scalability. Here are some examples of how you might use BEM naming conventions:
 
 ### Block:
@@ -2069,7 +2092,7 @@ A block is a standalone component that represents a high-level concept.
 ```css
 /* CSS */
 .navbar {
-  /* styles for the navbar block */
+    /* styles for the navbar block */
 }
 ```
 
@@ -2080,14 +2103,14 @@ An element is a part of a block that has no standalone meaning.
 ```html
 <!-- HTML -->
 <div class="navbar">
-  <button class="navbar__button"></button>
+    <button class="navbar__button"></button>
 </div>
 ```
 
 ```css
 /* CSS */
 .navbar__button {
-  /* styles for the navbar button element */
+    /* styles for the navbar button element */
 }
 ```
 
@@ -2103,11 +2126,11 @@ A modifier is a flag on a block or element that changes its appearance or behavi
 ```css
 /* CSS */
 .button {
-  /* styles for the button block */
+    /* styles for the button block */
 }
 
 .button--primary {
-  /* styles for the primary modifier */
+    /* styles for the primary modifier */
 }
 ```
 
@@ -2124,11 +2147,11 @@ When you have multiple instances of the same block on a page, BEM helps you avoi
 ```css
 /* CSS */
 .card {
-  /* styles for the card block */
+    /* styles for the card block */
 }
 
 .card + .card {
-  /* styles for the second instance of the card block */
+    /* styles for the second instance of the card block */
 }
 ```
 
@@ -2139,19 +2162,19 @@ Elements within a block are named to clearly indicate their hierarchical relatio
 ```html
 <!-- HTML -->
 <div class="header">
-  <h1 class="header__title"></h1>
-  <nav class="header__nav"></nav>
+    <h1 class="header__title"></h1>
+    <nav class="header__nav"></nav>
 </div>
 ```
 
 ```css
 /* CSS */
 .header__title {
-  /* styles for the title element */
+    /* styles for the title element */
 }
 
 .header__nav {
-  /* styles for the nav element */
+    /* styles for the nav element */
 }
 ```
 
@@ -2167,11 +2190,11 @@ Use modifiers to represent different states of a block or element.
 ```css
 /* CSS */
 .button {
-  /* styles for the button block */
+    /* styles for the button block */
 }
 
 .button--disabled {
-  /* styles for the disabled modifier */
+    /* styles for the disabled modifier */
 }
 ```
 
@@ -2195,7 +2218,7 @@ A block is a standalone component that represents a high-level concept.
 ```css
 /* CSS */
 .navbar {
-  /* styles for the navbar block */
+    /* styles for the navbar block */
 }
 ```
 
@@ -2206,14 +2229,14 @@ An element is a part of a block that has no standalone meaning.
 ```html
 <!-- HTML -->
 <div class="navbar">
-  <button class="navbar__button"></button>
+    <button class="navbar__button"></button>
 </div>
 ```
 
 ```css
 /* CSS */
 .navbar__button {
-  /* styles for the navbar button element */
+    /* styles for the navbar button element */
 }
 ```
 
@@ -2229,11 +2252,11 @@ A modifier is a flag on a block or element that changes its appearance or behavi
 ```css
 /* CSS */
 .button {
-  /* styles for the button block */
+    /* styles for the button block */
 }
 
 .button--primary {
-  /* styles for the primary modifier */
+    /* styles for the primary modifier */
 }
 ```
 
@@ -2250,11 +2273,11 @@ When you have multiple instances of the same block on a page, BEM helps you avoi
 ```css
 /* CSS */
 .card {
-  /* styles for the card block */
+    /* styles for the card block */
 }
 
 .card + .card {
-  /* styles for the second instance of the card block */
+    /* styles for the second instance of the card block */
 }
 ```
 
@@ -2265,19 +2288,19 @@ Elements within a block are named to clearly indicate their hierarchical relatio
 ```html
 <!-- HTML -->
 <div class="header">
-  <h1 class="header__title"></h1>
-  <nav class="header__nav"></nav>
+    <h1 class="header__title"></h1>
+    <nav class="header__nav"></nav>
 </div>
 ```
 
 ```css
 /* CSS */
 .header__title {
-  /* styles for the title element */
+    /* styles for the title element */
 }
 
 .header__nav {
-  /* styles for the nav element */
+    /* styles for the nav element */
 }
 ```
 
@@ -2293,11 +2316,11 @@ Use modifiers to represent different states of a block or element.
 ```css
 /* CSS */
 .button {
-  /* styles for the button block */
+    /* styles for the button block */
 }
 
 .button--disabled {
-  /* styles for the disabled modifier */
+    /* styles for the disabled modifier */
 }
 ```
 
