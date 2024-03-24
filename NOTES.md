@@ -39,10 +39,12 @@ p {
 
 ````css
 id is unique,
-class is not ```css #id {
+class is not 
+```css 
+#id {
     color: red;
 }
-````
+```
 
 ## Group CSS Selectors
 
