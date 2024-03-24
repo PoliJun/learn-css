@@ -512,6 +512,26 @@ This doesn't count the scroll bar at the right side. **_This lead to the horizon
 
 This counts the scroll bar at the right side. This lead to the horizontal scroll bar disappear.
 
+<div style="border:2px solid orange; padding:5px; margin: 20px 0">
+
+### Tips:
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+```
+
+This CSS code snippet is a common practice to reset the default margin and padding of all elements to zero and set the box-sizing property to border-box. The box-sizing property with a value of border-box ensures that the width and height of an element include the padding and border, making it easier to calculate the total size of an element.
+
+</div>
+
 ### margin shorthand
 
 ```css
