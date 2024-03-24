@@ -150,7 +150,8 @@ Here are some key points about inheritance in CSS:
 It's important to check the documentation for individual CSS properties to understand whether they are inherited by default or not. Some properties have specific inheritance behaviors, and others may depend on the browser implementation. Understanding how inheritance works is crucial for effectively styling and organizing your CSS.
 
 </div>
-**My Notes:**
+
+**My Notes:**  
 `font` related is inherited
 
 ```css
