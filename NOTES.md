@@ -494,6 +494,24 @@ From inner to outer:
 -   `border-box`
     > `width` and `height` apply to content, padding and border
 
+### `width` `100vh` and `100%`
+
+```css
+.container {
+    width: 100vh;
+}
+```
+
+This doesn't count the scroll bar at the right side. **_This lead to the horizontal scroll bar show up._**
+
+```css
+.container {
+    width: 100%;
+}
+```
+
+This counts the scroll bar at the right side. This lead to the horizontal scroll bar disappear.
+
 ### margin shorthand
 
 ```css
