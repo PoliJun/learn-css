@@ -249,7 +249,7 @@ body {
 
 ## Tools for color
 
--   [collors](https://coolors.co)
+-   [collors](https://coolors.co/contrast-checker/112a46-acc8e5)
     -   It can evaluate the contrast between two colors.
     -   Pick a color and it will generate a color palette for you.
 -   [webaim](https://webaim.org)
