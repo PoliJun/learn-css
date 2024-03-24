@@ -37,10 +37,10 @@ p {
 
 3. ID Selector (Highest Priority)
 
-````css
 id is unique,
-class is not 
-```css 
+class is not
+
+```css
 #id {
     color: red;
 }
@@ -146,6 +146,7 @@ Here are some key points about inheritance in CSS:
         ```
 
 It's important to check the documentation for individual CSS properties to understand whether they are inherited by default or not. Some properties have specific inheritance behaviors, and others may depend on the browser implementation. Understanding how inheritance works is crucial for effectively styling and organizing your CSS.
+
 </div>
 **My Notes:**
 `font` related is inherited
@@ -2036,7 +2037,9 @@ transition: margin-right 4s ease-in-out 1s;
 transition: display 4s allow-discrete;
 
 /* Apply to 2 properties */
-transition: margin-right 4s, color 1s;
+transition:
+    margin-right 4s,
+    color 1s;
 
 /* Apply to all changed properties */
 transition: all 0.5s ease-out allow-discrete;
