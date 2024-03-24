@@ -46,6 +46,8 @@ class is not
 }
 ```
 
+id selector is not recommended to be used in CSS. It's better to use class selector.
+
 ## Group CSS Selectors
 
 -   comma in between
