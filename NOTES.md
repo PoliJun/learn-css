@@ -1008,7 +1008,7 @@ ul li:nth-child(odd) {
 
 ```css
 ul {
-    list-style-position: inside; /* outside is default, explain: inside or outside of padding */
+    list-style-position: inside; /* outside is default, explain: inside or outside of principal block box */
 }
 ```
 
