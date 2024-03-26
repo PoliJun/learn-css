@@ -152,7 +152,7 @@ It's important to check the documentation for individual CSS properties to under
 </div>
 
 **My Notes:**  
-`font` related is inherited
+Children elements' `font` related is inherited. But `input` and `button` are not inherited.
 
 ```css
 body {
