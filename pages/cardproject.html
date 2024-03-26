@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -31,7 +31,9 @@
       }
 
       body {
-        font: 1.5rem "Nunito", sans-serif;
+        font:
+          1.5rem "Nunito",
+          sans-serif;
         min-height: 100vh;
         background-color: #475569;
         background-image: radial-gradient(whitesmoke, #475569);
@@ -39,8 +41,7 @@
         flex-direction: column;
       }
 
-      :is(header,
-      footer,.card) {
+      :is(header, footer, .card) {
         position: sticky;
         background-color: #1e293b;
         color: whitesmoke;
@@ -164,7 +165,7 @@
       @media screen and (min-width: 1200px) {
         .card {
           /* Remove calc() - min() supports math! */
-          width: min(calc(33% - 1rem),  500px);
+          width: min(calc(33% - 1rem), 500px);
         }
       }
 

@@ -1,43 +1,43 @@
 body {
-    background-color: lightblue;
+  background-color: lightblue;
 }
 
 h1,
 h2 {
-    color: blue;
+  color: blue;
 }
 
 h1 h2 {
-    color: red;
+  color: red;
 }
 
 p {
-    color: purple !important;
-    font-size: 64px;
+  color: purple !important;
+  font-size: 64px;
 }
 
 .gray {
-    background-color: gray;
+  background-color: gray;
 }
 
 button,
 input,
 select,
 textarea {
-    font: inherit;
-    /* then it will be inherited font-family: inherit; */
+  font: inherit;
+  /* then it will be inherited font-family: inherit; */
 
-    font-size: inherit;
-    line-height: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 p {
-    color: red !important;
+  color: red !important;
 }
 
 .container {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
