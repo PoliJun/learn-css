@@ -567,12 +567,14 @@ outline is outside of border.
 
 ```css
 .radius {
-    border: 100px solid red;
+    width: 100px;
+    height: 100px;
+    border: 2px solid red;
     border-radius: 50px;
 }
 ```
 
-When `border-radius` is half of `border`, it will be a circle.
+When `border-radius` is half of `width` and `height`, it will be a circle.
 
 ## `text`
 
