@@ -1004,6 +1004,14 @@ ul li:nth-child(odd) {
 }
 ```
 
+### `list-style-position`
+
+```css
+ul {
+    list-style-position: inside; /* outside is default, explain: inside or outside of padding */
+}
+```
+
 ## `nav`
 
 ## `display`
