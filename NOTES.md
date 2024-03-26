@@ -580,15 +580,41 @@ When `border-radius` is half of `width` and `height`, it will be a circle.
 
 ```css
 p {
-    text-decoration: line-through;
+    text-decoration: line-through; /* underline, overline, line-through, none */
+    text-align: justify; /* left, right, center, justify */
     text-indent: 10px;
     line-height: 1.5; /* 1.5 times of font-size, 1.2 is default */
     letter-spacing: 2px; /* space between letters */
+    word-spacing: 5px; /* space between words */
     font-weight: 400; /* 400 is default */
     font-style: italic; /* normal is default */
-    font-family: Arial, sans-serif; /* sans-serif is default */
+    font-family: "Roboto", Arial, sans-serif; /* sans-serif is default */
 }
 ```
+
+<div style="border:2px solid orange; padding:5px; margin: 20px 0">
+
+### Font Family in CSS: Quotes or No Quotes?
+
+## **Copilot:**
+
+In CSS, font family names that contain whitespace, digits, or punctuation characters must be quoted. If a font family name is composed of two or more words, it must be quoted. For example, `"Times New Roman"` or `"Roboto"`.
+
+Single-word font family names do not need to be quoted. For example, `Arial` or `sans-serif`.
+
+In your code:
+
+```css
+font-family: "Roboto", Arial, sans-serif; /* sans-serif is default */
+```
+
+-   `"Roboto"` is a specific font that needs to be quoted because it's a custom font and could potentially contain spaces.
+-   `Arial` is a system font that doesn't need to be quoted because it's a single word.
+-   `sans-serif` is a generic font family that doesn't need to be quoted. It's used as a fallback if none of the other fonts are available. It also doesn't need to be quoted because it's a CSS keyword.
+
+It's worth noting that while it's not necessary to quote single-word font family names, it's not wrong to do so, and some developers prefer to quote all font family names for consistency.
+
+</div>
 
 -   `font-family` can have multiple choices, if the first one is not available, it will use the second one.
 
