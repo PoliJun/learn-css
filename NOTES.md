@@ -498,7 +498,7 @@ From inner to outer:
 
 ```css
 .container {
-    width: 100vh;
+    width: 100vw;
 }
 ```
 
