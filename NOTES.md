@@ -1664,6 +1664,8 @@ There are bunch of media type and breakpoint we can apply.
 
 ### Intro by Google Bard
 
+<div style="border: 1px solid purple; padding: 2rem; margin: 3rem ">
+
 #### @media in CSS: Tailoring Styles for Different Devices and Situations
 
 The `@media` rule in CSS is a powerful tool for creating **responsive web designs** that adapt to different devices and screen sizes. It allows you to define different style sets based on specific media queries, ensuring your website looks and functions optimally across desktops, tablets, smartphones, and more.
@@ -1720,6 +1722,8 @@ Here's a breakdown of @media:
 - There are various media query features available, so explore the possibilities to achieve your desired design adaptations.
 
 Remember, effectively using `@media` requires understanding your target audience and their devices. By implementing well-structured media queries, you can create a website that delivers a seamless and enjoyable experience for everyone.
+
+</div>
 
 ### Common breakpoints
 
