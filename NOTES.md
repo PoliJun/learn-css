@@ -1474,6 +1474,13 @@ This will reverse this element
 - [`align-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)
 - [`align-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
 
+### other properties
+
+- `flex-wrap: wrap;` or `nowrap` or `wrap-reverse`
+- `flex-direction: row;` or `column` or `row-reverse` or `column-reverse`
+- spacing between elements: `gap: 1rem;`
+- `space-between` and `space-around` in `justify-content` and `align-content`
+
 ## Grid Layout
 
 - `display: grid;`
