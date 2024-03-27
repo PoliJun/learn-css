@@ -1,8 +1,8 @@
-# Flexbox
+## Flexbox
 
 [ **A Complete Guide to Flexbox** ](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-## `flex-flow`
+### `flex-flow`
 
 First is direction, second is wrap
 
@@ -31,7 +31,7 @@ Eventually, you can use these three properties setting any elements.
 }
 ```
 
-## `flex` shorthand
+### `flex` shorthand
 
 The first value is `flex-grow` the second value is `flex-shrink` the third value is `flex-basis`
 
@@ -42,7 +42,7 @@ The first value is `flex-grow` the second value is `flex-shrink` the third value
 }
 ```
 
-## `order` property
+### `order` property
 
 This will reverse this element
 
@@ -52,11 +52,11 @@ This will reverse this element
 }
 ```
 
-## Practice
+### Practice
 
 [**Flexbox Froggy**](https://flexboxfroggy.com/)
 
-## `align-content`, `justify-content` and `align-items`
+### `align-content`, `justify-content` and `align-items`
 
 - [`justify-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)
 - [`align-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)
