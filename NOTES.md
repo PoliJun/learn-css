@@ -1634,6 +1634,10 @@ like this:
 }
 ```
 
+> **Tips**:
+>
+> Set background color in container, then set background image in hero, then you can see a filter effect.
+
 ### `background` shorthand
 
 There are bunch of shorthands without dash, just one `background` property, values separated by comma.
