@@ -2122,7 +2122,7 @@ main {
 
 ### Transform and Transition
 
-#### Transform
+#### Transform property
 
 **Warning: Only transformable elements can be transformed. That is, all elements whose layout is governed by the CSS box model except for: non-replaced inline boxes, table-column boxes, and table-column-group boxes.**
 
