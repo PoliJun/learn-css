@@ -209,24 +209,23 @@
         harum quo!
       </div>
     </div>
+    <button id="left">Left</button>
     <button onclick="scrollRight()">Right</button>
-    <button onclick="myAlert()">Left</button>
     <script>
       const container = document.querySelector(".container");
-      const box = document.querySelector(".box");
       const scrollRight = () => {
         container.scrollBy({
           left: 320,
           behavior: "smooth",
         });
       };
-      const myAlert = () => {
+      const scrollLeft = () => {
         container.scrollBy({
           left: -320,
           behavior: "smooth",
         });
-        // alert("Left");
       };
+      document.querySelector("#left").addEventListener("click", scrollLeft);
     </script>
   </body>
 </html>
